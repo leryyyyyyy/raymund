@@ -26,7 +26,7 @@ const Footer = () => {
             <p>
               1234 Street Name,
               <br />
-              City, State, 12345
+              City, State, 123456
               <br />
               Country
             </p>
