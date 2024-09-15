@@ -12,16 +12,16 @@ const Navbar = () => {
   return (
     <>
       {/* Black Bar Section */}
-      <div className="bg-black text-white roboto-font-nav text-sm">
+      <div className="bg-black text-white roboto-font-nav text-sm md:text-base hidden md:block">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-2">
           {/* Contact Icon */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 text-xs sm:text-sm">
             <i className="fas fa-phone-alt w-5 h-5 text-white"></i>
             <span className="font-medium">(123) 456-7890</span>
           </div>
 
           {/* Links */}
-          <div className="space-x-4">
+          <div className="space-x-4 text-xs sm:text-xs">
             <Link href="/reviews" className="hover:underline">
               REVIEWS
             </Link>
@@ -34,6 +34,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
       <nav className="bg-white shadow-lg roboto-font-nav text-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">

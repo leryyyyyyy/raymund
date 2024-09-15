@@ -1,4 +1,4 @@
-import { Roboto } from "@next/font/google";
+import { Roboto } from "next/font/google";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -17,6 +17,9 @@ module.exports = {
         headings: "Roboto",
         body: "Roboto",
       },
+      screens: {
+        xs: "360px",
+      },
     },
   },
   plugins: [
@@ -32,13 +35,42 @@ module.exports = {
           fontWeight: "600",
           fontSize: "18px",
           backgroundColor: "#FEEA13", //! changed color
-          color: "#000 ", //! changed color
+          color: "#000", //! changed color
+          borderRadius: "8px",
+          padding: "6px 18px",
+          transition: "all 0.3s ease-in-out",
+          border: "2px solid #000",
+        },
+        ".footer-button": {
+          fontFamily: "Roboto",
+          fontWeight: "600",
+          fontSize: "18px",
+          backgroundColor: "#F81818", //! changed color
+          color: "#fff ", //! changed color
           borderRadius: "8px",
           padding: "6px 18px",
           transition: "all 0.3s ease-in-out",
         },
         ".primary-color": {
           backgroundColor: "#FAC003", //! changed color
+        },
+        ".secondary-color": {
+          backgroundColor: "#004AAD ", //! changed color
+        },
+        ".tertiary-color": {
+          backgroundColor: "#FF3131 ", //! changed color
+        },
+        ".blue-text": {
+          color: "#0095FF ", //! changed color
+        },
+        ".yellow-text": {
+          color: "#FFEA00 ", //! changed color
+        },
+        ".green-text": {
+          color: "#4CCE32 ", //! changed color
+        },
+        ".red-text": {
+          color: "#FF0000 ", //! changed color
         },
       });
     },
