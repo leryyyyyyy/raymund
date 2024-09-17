@@ -1,13 +1,16 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  const isActive = (path) => pathname === path;
 
   return (
     <>
@@ -45,9 +48,18 @@ const Navbar = () => {
               </a>
             </div>
             <div className="hidden md:flex space-x-4">
-              <Link href="/" className="text-black  px-3 py-2 rounded-md group">
+              <Link
+                href="/"
+                className="text-black px-3 py-2 rounded-md group 
+                 
+             "
+              >
                 HOME
-                <span className="block h-[2px] bg-gray-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                <span
+                  className={`block h-[2px] bg-gray-500 transform ${
+                    isActive("/") ? "scale-x-100" : "scale-x-0"
+                  } group-hover:scale-x-100 transition-transform duration-300`}
+                ></span>
               </Link>
               <Link
                 href="/about"
@@ -61,7 +73,11 @@ const Navbar = () => {
                 className="text-black  px-3 py-2 rounded-md group"
               >
                 SERVICES
-                <span className="block h-[2px] bg-gray-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                <span
+                  className={`block h-[2px] bg-gray-500 transform ${
+                    isActive("/services") ? "scale-x-100" : "scale-x-0"
+                  } group-hover:scale-x-100 transition-transform duration-300`}
+                ></span>
               </Link>
               <Link
                 href="/pricing"
@@ -109,7 +125,11 @@ const Navbar = () => {
               className="text-black  block px-3 py-2 rounded-md text-base font-medium group"
             >
               Home
-              <span className="block h-[2px] bg-gray-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              <span
+                className={`block h-[2px] bg-gray-500 transform ${
+                  isActive("/") ? "scale-x-100" : "scale-x-0"
+                } group-hover:scale-x-100 transition-transform duration-300`}
+              ></span>
             </Link>
             <Link
               href="/about"
@@ -123,7 +143,11 @@ const Navbar = () => {
               className="text-black  block px-3 py-2 rounded-md text-base font-medium group"
             >
               Services
-              <span className="block h-[2px] bg-gray-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              <span
+                className={`block h-[2px] bg-gray-500 transform ${
+                  isActive("/services") ? "scale-x-100" : "scale-x-0"
+                } group-hover:scale-x-100 transition-transform duration-300`}
+              ></span>
             </Link>
             <Link
               href="/pricing"

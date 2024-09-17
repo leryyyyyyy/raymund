@@ -4,21 +4,49 @@ import Link from "next/link";
 
 const Footer = () => {
   const [feedback, setFeedback] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false); // Optional: handle loading state
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleFeedbackChange = (e) => {
-    setFeedback(e.target.value);
+  const handleFeedbackChange = (event) => {
+    setFeedback(event.target.value);
   };
 
-  const handleFeedbackSubmit = (e) => {
-    e.preventDefault();
-    // Handle feedback submission logic here
-    alert("Feedback submitted: " + feedback);
-    setFeedback("");
+  const handleFeedbackSubmit = async (event) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setSuccessMessage("");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/feedback`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ feedback }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to submit feedback");
+      }
+
+      const result = await response.json();
+      setSuccessMessage("Feedback submitted successfully!");
+    } catch (error) {
+      setErrorMessage("There was an error submitting your feedback.");
+    } finally {
+      setIsSubmitting(false);
+      setFeedback("");
+    }
   };
 
   return (
     <footer className="primary-color text-black py-16 mt-auto">
-      <div className=" max-w-fit mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-fit mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Section 1: Address and Google Maps */}
           <div className="flex flex-col space-y-4 lg:col-span-2">
@@ -39,7 +67,6 @@ const Footer = () => {
             <div className="text-lg font-semibold">Contact Us</div>
             <p>Phone: (123) 456-7890</p>
             <a href="mailto:blonesraymund@gmail.com">blonesraymund@gmail.com</a>
-            {/* <p>blonesraymund@gmail.com</p> */}
 
             <form onSubmit={handleFeedbackSubmit} className="mt-4">
               <div className="text-lg font-semibold">Send Us Your Feedback</div>
@@ -54,10 +81,20 @@ const Footer = () => {
                 placeholder="Your feedback..."
                 required
               ></textarea>
-              <button type="submit" className="mt-2 px-4 py-2 footer-button">
-                Submit
+              <button
+                type="submit"
+                className="mt-2 px-4 py-2 footer-button"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Submitting..." : "Submit"}
               </button>
             </form>
+
+            {/* Success/Error Messages */}
+            {successMessage && (
+              <p className="green-text mt-2">{successMessage}</p>
+            )}
+            {errorMessage && <p className="red-text mt-2">{errorMessage}</p>}
           </div>
 
           {/* Section 3: About and Social Media */}
@@ -65,12 +102,12 @@ const Footer = () => {
             <div className="text-lg font-semibold">About</div>
             <ul className="space-y-2">
               <li>
-                <Link href="/contacts" className=" hover:underline">
+                <Link href="/contacts" className="hover:underline">
                   Contacts
                 </Link>
               </li>
               <li>
-                <Link href="/reviews" className=" hover:underline">
+                <Link href="/reviews" className="hover:underline">
                   Reviews
                 </Link>
               </li>
@@ -79,7 +116,7 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a
                 href="https://facebook.com"
-                className=" hover:text-blue-500"
+                className="hover:text-blue-500"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -87,7 +124,7 @@ const Footer = () => {
               </a>
               <a
                 href="https://twitter.com"
-                className=" hover:text-blue-500"
+                className="hover:text-blue-500"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -95,7 +132,7 @@ const Footer = () => {
               </a>
               <a
                 href="https://instagram.com"
-                className=" hover:text-blue-500"
+                className="hover:text-blue-500"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -103,7 +140,7 @@ const Footer = () => {
               </a>
               <a
                 href="https://linkedin.com"
-                className=" hover:text-blue-500"
+                className="hover:text-blue-500"
                 target="_blank"
                 rel="noopener noreferrer"
               >
