@@ -34,3 +34,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore Prettier config file
+.prettierrc
+.prettierignore
+.prettierrc.json
+.prettierrc.yaml
+.prettierrc.yml
+.prettierrc.js
+.prettierrc.cjs
+
+# Ignore Prettier log files
+prettier.log

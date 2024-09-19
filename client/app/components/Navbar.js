@@ -63,7 +63,7 @@ const Navbar = () => {
                 ></span>
               </Link>
               <Link
-                href="/about"
+                href="/about-us"
                 className="text-black  px-3 py-2 rounded-md group"
               >
                 ABOUT
@@ -89,7 +89,10 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="hidden md:flex">
-              <Link href="/get-started" className="primary-button hover:bg-yellow-100 hover:scale-x-105">
+              <Link
+                href="/get-started"
+                className="primary-button  hover:scale-x-105"
+              >
                 GET A FREE QUOTE
               </Link>
             </div>

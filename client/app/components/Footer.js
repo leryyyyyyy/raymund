@@ -65,7 +65,9 @@ const Footer = () => {
           {/* Section 2: Contacts and Feedback */}
           <div className="lg:col-span-1">
             <div className="text-xl font-semibold">Contacts</div>
-            <a href="mailto:blonesraymund@gmail.com" className="m-1 underline">blonesraymund@gmail.com</a>
+            <a href="mailto:blonesraymund@gmail.com" className="m-1 underline">
+              blonesraymund@gmail.com
+            </a>
             <p className="m-1">778-922-8628</p>
             {/* <p>blonesraymund@gmail.com</p> */}
 
@@ -122,7 +124,6 @@ const Footer = () => {
                 rel="noopener noreferrer"
               >
                 <i className="fab fa-facebook-f mr-3"></i>
-                Facebook insert facebook name
               </a>
               <a
                 href="https://twitter.com"

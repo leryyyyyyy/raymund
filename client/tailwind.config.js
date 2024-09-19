@@ -30,6 +30,15 @@ module.exports = {
           // fontWeight: "600",
           // fontSize: "18px",
         },
+        ".font-raleway": {
+          fontFamily: "Raleway",
+        },
+        ".font-lato": {
+          fontFamily: "Lato",
+        },
+        ".font-inter": {
+          fontFamily: "Inter",
+        },
         ".primary-button": {
           fontFamily: "Roboto",
           fontWeight: "600",
@@ -61,7 +70,7 @@ module.exports = {
           backgroundColor: "#FF3131 ", //! changed color
         },
         ".blue-text": {
-          color: "#0095FF ", //! changed color
+          color: "#004AAD ", //! changed color
         },
         ".yellow-text": {
           color: "#FFEA00 ", //! changed color
@@ -70,7 +79,22 @@ module.exports = {
           color: "#4CCE32 ", //! changed color
         },
         ".red-text": {
-          color: "#FF0000 ", //! changed color
+          color: "#FF3131 ", //! changed color
+        },
+        ".text-shadow": {
+          textShadow: "2px 2px 4px rgba(0, 0, 0, 0.25)",
+        },
+        ".custom-box-shadow": {
+          boxShadow: "0 4px 48px rgba(0, 0, 0, 0.25)",
+        },
+        ".custom-box-shadow2": {
+          boxShadow: "0 4px 24px rgba(0, 0, 0, 0.25)",
+        },
+        ".text-outline-blue": {
+          "-webkit-text-stroke": "1px #004AAD",
+        },
+        ".text-indent": {
+          textIndent: "4rem",
         },
       });
     },
