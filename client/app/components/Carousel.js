@@ -66,7 +66,7 @@ const Carousel = () => {
     <div className="relative roboto-font-nav">
       <div className="flex items-center">
         <FaChevronLeft
-          className="text-gray-500 cursor-pointer absolute left-0 z-10"
+          className="text-5xl hover:scale-110 text-gray-500 cursor-pointer absolute left-0 z-10"
           onClick={handlePrev}
         />
         <div className="flex overflow-hidden mx-auto">
@@ -74,14 +74,14 @@ const Carousel = () => {
             {getDisplayedImages().map((item, index) => (
               <div
                 key={index}
-                className={`relative bg-white p-10 border primary-color rounded-3xl mx-2`}
+                className={`relative bg-white p-10 border primary-color rounded-[50px] mx-2 w-80`}
               >
                 <img
-                  className="w-80 h-auto"
+                  className="w-80 h-auto shadow-md shadow-slate-600"
                   src={item.src}
                   alt={`Service ${index + 1}`}
                 />
-                <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-75 shadow-lg text-black p-4 text-center w-3/4">
+                <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-75 shadow-lg text-black p-4 text-center w-52 font-bold text-sm">
                   {item.description}
                 </div>
               </div>
@@ -89,7 +89,7 @@ const Carousel = () => {
           </div>
         </div>
         <FaChevronRight
-          className="text-gray-500 cursor-pointer absolute right-0 z-10"
+          className="text-5xl hover:scale-110 text-gray-500 cursor-pointer absolute right-0 z-10"
           onClick={handleNext}
         />
       </div>

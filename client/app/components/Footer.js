@@ -17,7 +17,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="primary-color text-black py-16 mt-auto">
+    <footer className="primary-color text-black py-16 mt-auto border-t-2 border-t-black">
       <div className=" max-w-fit mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Section 1: Address and Google Maps */}
@@ -35,14 +35,14 @@ const Footer = () => {
           </div>
 
           {/* Section 2: Contacts and Feedback */}
-          <div className="space-y-4 lg:col-span-1">
-            <div className="text-lg font-semibold">Contact Us</div>
-            <p>Phone: (123) 456-7890</p>
-            <a href="mailto:blonesraymund@gmail.com">blonesraymund@gmail.com</a>
+          <div className="lg:col-span-1">
+            <div className="text-xl font-semibold">Contacts</div>
+            <a href="mailto:blonesraymund@gmail.com" className="m-1 underline">blonesraymund@gmail.com</a>
+            <p className="m-1">778-922-8628</p>
             {/* <p>blonesraymund@gmail.com</p> */}
 
             <form onSubmit={handleFeedbackSubmit} className="mt-4">
-              <div className="text-lg font-semibold">Send Us Your Feedback</div>
+              <div className="text-xl font-semibold">Send Us Your Feedback</div>
               <p>
                 Your feedback helps us serve you better! Send us through email.
               </p>
@@ -51,7 +51,7 @@ const Footer = () => {
                 onChange={handleFeedbackChange}
                 rows="4"
                 className="w-full p-2 mt-1 border border-gray-600 rounded-md"
-                placeholder="Your feedback..."
+                placeholder="Message..."
                 required
               ></textarea>
               <button type="submit" className="mt-2 px-4 py-2 footer-button">
@@ -62,7 +62,7 @@ const Footer = () => {
 
           {/* Section 3: About and Social Media */}
           <div className="space-y-4 lg:col-span-1">
-            <div className="text-lg font-semibold">About</div>
+            <div className="text-xl font-semibold">About</div>
             <ul className="space-y-2">
               <li>
                 <Link href="/contacts" className=" hover:underline">
@@ -75,15 +75,16 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-            <div className="text-lg font-semibold">Follow Us</div>
+            <div className="text-xl font-semibold">Follow Us</div>
             <div className="flex space-x-4">
               <a
                 href="https://facebook.com"
-                className=" hover:text-blue-500"
+                className=" hover:text-blue-500 underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-facebook-f"></i>
+                <i className="fab fa-facebook-f mr-3"></i>
+                Facebook insert facebook name
               </a>
               <a
                 href="https://twitter.com"

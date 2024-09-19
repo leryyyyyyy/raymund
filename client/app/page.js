@@ -35,13 +35,13 @@ const Page = () => {
                 <div className="flex flex-wrap gap-4 mt-4">
                   <a
                     href="#get-started"
-                    className="inline-flex items-center justify-center px-4 py-2 text-sm sm:text-base md:text-lg font-semibold primary-button"
+                    className="inline-flex items-center justify-center px-4 py-2 text-sm sm:text-base md:text-lg font-semibold primary-button hover:bg-yellow-100 hover:scale-x-105"
                   >
                     GET STARTED
                   </a>
                   <a
                     href="#our-services"
-                    className="inline-flex items-center justify-center px-4 py-2 text-sm sm:text-base md:text-lg font-semibold primary-button"
+                    className="inline-flex items-center justify-center px-4 py-2 text-sm sm:text-base md:text-lg font-semibold primary-button hover:bg-yellow-100 hover:scale-x-105"
                   >
                     OUR SERVICES
                   </a>
@@ -97,9 +97,9 @@ const Page = () => {
         <div className="h-auto py-8 roboto-font-nav">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center">
-              <div className="flex-1">
+              <div className="flex-1 justify-center">
                 <img
-                  className="w-fit h-auto"
+                  className="w-fit h-auto "
                   src="/EmergencySolutions.png"
                   alt="Box"
                 />
@@ -131,7 +131,7 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="h-auto py-8 roboto-font-nav bg-gray-100">
+        <div className="h-auto py-8 roboto-font-nav ">
           <div className="container mx-auto px-4">
             <div className="text-center mb-8">
               <h2 className="text-4xl font-bold mb-2 text-black">
@@ -195,18 +195,19 @@ const Page = () => {
                   need appliance repair, make sure you're calling on the real
                   experts—Raymund Blones Appliance Repair.
                 </p>
+                <button className="tertiary-color px-9 py-3 rounded-full shadow-md shadow-slate-500 mt-8">OUR STORY</button>
               </div>
             </div>
           </div>
         </div>
-        <div className="h-auto py-8 roboto-font-nav bg-gray-100">
+        <div className="h-auto py-8 roboto-font-nav ">
           <div className="container mx-auto px-4">
             <div className="text-center mb-8">
               <h2 className="text-4xl font-bold mb-2 text-black">
                 CUSTOMER REVIEW
               </h2>
             </div>
-            <div className=" secondary-color p-8 rounded-3xl">
+            <div className=" secondary-color p-14 rounded-[60px]">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-black">
                 <div className="flex flex-col items-center max-w-sm mx-auto bg-white shadow-lg rounded-lg p-6">
                   <span className="text-lg font-bold ">Miranda Curtis</span>
@@ -221,7 +222,7 @@ const Page = () => {
                   <div className="flex mb-4">
                     <span className="text-yellow-400 text-4xl">★ ★ ★ ★ ★</span>
                   </div>
-                  <p className="text-lg text-gray-700 text-center">
+                  <p className="text-sm text-gray-700 text-center">
                     "I had a great experience with this appliance repair
                     service. They were quick, professional, and my washing
                     machine is running like new again!"
@@ -241,7 +242,7 @@ const Page = () => {
                   <div className="flex mb-4">
                     <span className="text-yellow-400 text-4xl">★ ★ ★ ★ ★</span>
                   </div>
-                  <p className="text-lg text-gray-700 text-center">
+                  <p className="text-sm text-gray-700 text-center">
                     "Their service was fantastic! The technician was friendly
                     and quickly fixed my refrigerator. Highly recommended!"
                   </p>
@@ -260,12 +261,15 @@ const Page = () => {
                   <div className="flex mb-4">
                     <span className="text-yellow-400 text-4xl">★ ★ ★ ★ ★</span>
                   </div>
-                  <p className="text-lg text-gray-700 text-center">
+                  <p className="text-sm text-gray-700 text-center">
                     "Fast, efficient, and affordable. They got my dryer working
                     again in no time. Excellent service!"
                   </p>
                 </div>
               </div>
+            </div>
+            <div className="mt-5 text-center">
+              <a href="#" className=" text-slate-600 border-b">click here to view<span className="text-red-600 border-b-red-600"> more reviews</span></a>
             </div>
           </div>
         </div>

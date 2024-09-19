@@ -17,7 +17,7 @@ const Navbar = () => {
           {/* Contact Icon */}
           <div className="flex items-center space-x-2 text-xs sm:text-sm">
             <i className="fas fa-phone-alt w-5 h-5 text-white"></i>
-            <span className="font-medium">(123) 456-7890</span>
+            <span className="font-medium"> 778-922-8628 or 778-922-7812</span>
           </div>
 
           {/* Links */}
@@ -40,9 +40,10 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               {/* Logo */}
-              <a href="#" className="text-2xl font-bold text-blue-500">
+              {/* <a href="#" className="text-2xl font-bold text-blue-500">
                 LOGO
-              </a>
+              </a> */}
+              <img src="/Raymond 1.png" className="pb-2" alt="Logo"></img>
             </div>
             <div className="hidden md:flex space-x-4">
               <Link href="/" className="text-black  px-3 py-2 rounded-md group">
@@ -72,7 +73,7 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="hidden md:flex">
-              <Link href="/get-started" className="primary-button">
+              <Link href="/get-started" className="primary-button hover:bg-yellow-100 hover:scale-x-105">
                 GET A FREE QUOTE
               </Link>
             </div>
@@ -80,7 +81,7 @@ const Navbar = () => {
             <div className="md:hidden flex items-center">
               <button
                 onClick={toggleMenu}
-                className="text-black  focus:outline-none focus:text-blue-500"
+                className="text-black focus:outline-none focus:text-blue-500"
               >
                 <svg
                   className="w-6 h-6"
