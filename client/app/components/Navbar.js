@@ -67,7 +67,11 @@ const Navbar = () => {
                 className="text-black  px-3 py-2 rounded-md group"
               >
                 ABOUT
-                <span className="block h-[2px] bg-gray-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                <span
+                  className={`block h-[2px] bg-gray-500 transform ${
+                    isActive("/about-us") ? "scale-x-100" : "scale-x-0"
+                  } group-hover:scale-x-100 transition-transform duration-300`}
+                ></span>
               </Link>
               <Link
                 href="/services"
@@ -85,13 +89,17 @@ const Navbar = () => {
                 className="text-black  px-3 py-2 rounded-md group"
               >
                 PRICING
-                <span className="block h-[2px] bg-gray-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                <span
+                  className={`block h-[2px] bg-gray-500 transform ${
+                    isActive("/.") ? "scale-x-100" : "scale-x-0"
+                  } group-hover:scale-x-100 transition-transform duration-300`}
+                ></span>
               </Link>
             </div>
             <div className="hidden md:flex">
               <Link
                 href="/get-started"
-                className="primary-button  hover:scale-x-105"
+                className="primary-button md:scale-75 lg:scale-100 hover:scale-x-105 text-center"
               >
                 GET A FREE QUOTE
               </Link>
@@ -161,7 +169,7 @@ const Navbar = () => {
               <span className="block h-[2px] bg-gray-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </Link>
             <Link href="/get-started" className="primary-button">
-              Get Started
+              GET A FREE QOUTE
             </Link>
           </div>
         </div>
