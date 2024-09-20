@@ -27,7 +27,7 @@ exports.getInTouch = async (req, res) => {
 
     const mailOptions = {
       from: email,
-      to: "jlery1129@gmail.com",
+      to: process.env.EMAIL_USER,
       subject: "Service Appointment",
       text:
         `You have received a new service appointment request.\n\n` +

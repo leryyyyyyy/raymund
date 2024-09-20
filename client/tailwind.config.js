@@ -50,6 +50,27 @@ module.exports = {
           transition: "all 0.3s ease-in-out",
           border: "2px solid #000",
         },
+        ".secondary-button": {
+          fontFamily: "Roboto",
+          fontWeight: "600",
+          fontSize: "18px",
+          backgroundColor: "#F81818", //! changed color
+          color: "#fff", //! changed color
+          borderRadius: "8px",
+          padding: "6px 18px",
+          transition: "all 0.3s ease-in-out",
+          border: "2px solid #000",
+        },
+        ".submit-button": {
+          fontFamily: "Roboto",
+          fontWeight: "600",
+          fontSize: "25px",
+          backgroundColor: "#004AAD", //! changed color
+          color: "#fff", //! changed color
+          borderRadius: "8px",
+          padding: "6px 18px",
+          transition: "all 0.3s ease-in-out",
+        },
         ".footer-button": {
           fontFamily: "Roboto",
           fontWeight: "600",
@@ -66,11 +87,17 @@ module.exports = {
         ".secondary-color": {
           backgroundColor: "#004AAD ", //! changed color
         },
+        ".secondary-color-darker": {
+          backgroundColor: "#033578 ", //! changed color
+        },
         ".tertiary-color": {
           backgroundColor: "#FF3131 ", //! changed color
         },
         ".blue-text": {
           color: "#004AAD ", //! changed color
+        },
+        ".secondary-blue-text": {
+          color: "#033578 ", //! changed color
         },
         ".yellow-text": {
           color: "#FFEA00 ", //! changed color
@@ -80,6 +107,10 @@ module.exports = {
         },
         ".red-text": {
           color: "#FF3131 ", //! changed color
+        },
+        ".quote-form": {
+          backgroundColor:
+            "rgba(255, 49, 49, 0.53)" /* rgba(red, green, blue, alpha) */,
         },
         ".text-shadow": {
           textShadow: "2px 2px 4px rgba(0, 0, 0, 0.25)",

@@ -45,8 +45,8 @@ const Footer = () => {
   };
 
   return (
-    <footer className="primary-color text-black py-16 mt-auto border-t-2 border-t-black">
-      <div className=" max-w-fit mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="primary-color text-black  mt-auto border-t-2 border-t-black">
+      <div className="max-w-fit py-16 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Section 1: Address and Google Maps */}
           <div className="flex flex-col space-y-4 lg:col-span-2">
@@ -69,7 +69,6 @@ const Footer = () => {
               blonesraymund@gmail.com
             </a>
             <p className="m-1">778-922-8628</p>
-            {/* <p>blonesraymund@gmail.com</p> */}
 
             <form onSubmit={handleFeedbackSubmit} className="mt-4">
               <div className="text-xl font-semibold">Send Us Your Feedback</div>
@@ -93,7 +92,6 @@ const Footer = () => {
               </button>
             </form>
 
-            {/* Success/Error Messages */}
             {successMessage && (
               <p className="green-text mt-2">{successMessage}</p>
             )}
@@ -119,11 +117,11 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a
                 href="https://facebook.com"
-                className=" hover:text-blue-500 underline"
+                className="hover:text-blue-500 underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-facebook-f mr-3"></i>
+                Facebook
               </a>
               <a
                 href="https://twitter.com"
@@ -131,7 +129,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-twitter"></i>
+                Twitter
               </a>
               <a
                 href="https://instagram.com"
@@ -139,7 +137,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-instagram"></i>
+                Instagram
               </a>
               <a
                 href="https://linkedin.com"
@@ -147,11 +145,16 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-linkedin-in"></i>
+                LinkedIn
               </a>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Black Copyright Section */}
+      <div className="bg-black text-white py-4 text-center">
+        © 2024 Raymund Blones Appliances Repair
       </div>
     </footer>
   );
