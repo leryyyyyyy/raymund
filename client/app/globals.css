@@ -27,3 +27,25 @@ body {
     text-wrap: balance;
   }
 }
+.hero-image-default {
+  background-image: url('/servicesHero2.svg');
+}
+
+.hero-image-mobile {
+  background-image: url('/servicesHeroSm.png');
+}
+
+@media (max-width: 640px) {
+  .hero-image-default {
+    background-image: url('/servicesHeroSm.png');
+  }
+}
+
+.checkBoxSection{
+  border-radius: 50px;
+}
+
+/* machines car images */
+/* .custom-horizontal-gap {
+  column-gap: 10rem; 
+} */

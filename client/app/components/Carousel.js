@@ -20,9 +20,9 @@ const Carousel = () => {
 
   // Function to get the current screen size
   const getScreenSize = () => {
-    if (window.innerWidth < 640) {
+    if (window.innerWidth < 768) {
       return "sm";
-    } else if (window.innerWidth < 768) {
+    } else if (window.innerWidth < 1024) {
       return "md";
     } else {
       return "lg";
@@ -69,15 +69,15 @@ const Carousel = () => {
           className="text-5xl hover:scale-110 text-gray-500 cursor-pointer absolute left-0 z-10"
           onClick={handlePrev}
         />
-        <div className="flex overflow-hidden mx-auto">
+        <div className="flex overflow-hidden mx-auto w-full justify-center px-4">
           <div className="flex">
             {getDisplayedImages().map((item, index) => (
               <div
                 key={index}
-                className={`relative bg-white p-10 border primary-color rounded-[50px] mx-2 w-80`}
+                className={`relative bg-white p-7 sm:p-6 md:p-10 border primary-color rounded-[50px] mx-2 w-full sm:w-64 md:w-80`}
               >
                 <img
-                  className="w-80 h-auto shadow-md shadow-slate-600"
+                  className="object-contain h-auto max-w-full shadow-md shadow-slate-600"
                   src={item.src}
                   alt={`Service ${index + 1}`}
                 />

@@ -89,7 +89,10 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="hidden md:flex">
-              <Link href="/get-started" className="primary-button hover:bg-yellow-100 hover:scale-x-105">
+              <Link
+                href="/quote"
+                className="primary-button hover:bg-yellow-100 hover:scale-x-105"
+              >
                 GET A FREE QUOTE
               </Link>
             </div>

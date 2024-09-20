@@ -37,7 +37,7 @@ const Page = () => {
                     href="#get-started"
                     className="inline-flex items-center justify-center px-4 py-2 text-sm sm:text-base md:text-lg font-semibold primary-button hover:bg-yellow-100 hover:scale-x-105"
                   >
-                    GET STARTED
+                    LEARN MORE
                   </a>
                   <a
                     href="#our-services"
@@ -66,7 +66,7 @@ const Page = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="flex flex-col items-center">
                     <div className="text-3xl md:text-4xl font-bold mb-2">
-                      <CountUp end={25} duration={2} />
+                      <CountUp end={5} decimals={1} duration={2} />
                     </div>
                     <div className="text-sm md:text-base">
                       rated from <span className="blue-text">g</span>
@@ -79,7 +79,7 @@ const Page = () => {
                   </div>
                   <div className="flex flex-col items-center">
                     <div className="text-3xl md:text-4xl font-bold mb-2">
-                      <CountUp end={1000} duration={2} />
+                      <CountUp end={1000} duration={2} />+
                     </div>
                     <div className="text-sm md:text-base">jobs finished</div>
                   </div>
@@ -134,19 +134,19 @@ const Page = () => {
         <div className="h-auto py-8 roboto-font-nav ">
           <div className="container mx-auto px-4">
             <div className="text-center mb-8">
-              <h2 className="text-4xl font-bold mb-2 text-black">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-black">
                 WHAT SERVICE DO <span className="blue-text">YOU</span> NEED
                 TODAY?
               </h2>
 
-              <h3 className="text-lg  text-black">
+              <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-black">
                 HOW CAN <span className="red-text">WE HELP</span> YOU TODAY?
-              </h3>
+              </h2>
             </div>
             <Carousel />
           </div>
         </div>
-        <div className="h-auto py-8 roboto-font-nav">
+        {/* <div className="h-auto py-8 roboto-font-nav">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center">
               <div className="flex-1 md:pl-8 mt-4 md:mt-0 text-black p-4">
@@ -171,31 +171,32 @@ const Page = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="h-auto py-8 roboto-font-nav">
+        </div> */}
+        <div className="h-auto py-2 sm:py-6 md:py-8 roboto-font-nav text-black">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center">
               <div className="flex-1 md:pl-8 mt-4 md:mt-0 p-4">
-                <img className="w-fit h-auto" src="/manBlue.png" alt="Box" />
+                <img className="w-fit h-auto" src="/kgroun.png" alt="Box" />
               </div>
               <div className="flex-1 ">
                 <h3 className="text-2xl font-bold mb-4">
-                  <span className="blue-text">ACCEPT </span>
-                  <span className="red-text">NO IMITATIONS</span>
+                  <span className="blue-text">WHO </span>
+                  <span className="red-text">WE ARE</span>
                 </h3>
-                <p className="text-base text-black">
-                  While others may try to imitate our service, Raymund Blones
-                  Appliance Repair stands apart with our dedication to
-                  excellence and the personal touch that only a locally owned
-                  and operated business can offer. We are recognized for our
-                  prompt, hassle-free service, and a track record of satisfied
-                  customers throughout Victoria. Our work isn't just about
-                  fixing appliances—it's about building trust with each client
-                  and ensuring that their home runs smoothly again. When you
-                  need appliance repair, make sure you're calling on the real
-                  experts—Raymund Blones Appliance Repair.
+                <p className="text-sm sm:text-sm md:text-lg text-justify">
+                  Raymund Blones Appliance Repair is a professional and
+                  versatile appliance repair service based in Victoria, BC. With
+                  over 8 years of experience in the industry, Raymund recently
+                  established the business with a mission to deliver efficient,
+                  reliable, and affordable appliance repair solutions to
+                  homeowners in the Victoria area. We pride ourselves on our
+                  commitment to high-quality workmanship and a customer-first
+                  approach, ensuring that every repair is handled with care,
+                  precision, and integrity.
                 </p>
-                <button className="tertiary-color px-9 py-3 rounded-full shadow-md shadow-slate-500 mt-8">OUR STORY</button>
+                <button className="tertiary-color px-9 py-3 rounded-full shadow-md shadow-slate-500 mt-8 text-white">
+                  OUR STORY
+                </button>
               </div>
             </div>
           </div>
@@ -203,7 +204,7 @@ const Page = () => {
         <div className="h-auto py-8 roboto-font-nav ">
           <div className="container mx-auto px-4">
             <div className="text-center mb-8">
-              <h2 className="text-4xl font-bold mb-2 text-black">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-black">
                 CUSTOMER REVIEW
               </h2>
             </div>
@@ -220,7 +221,9 @@ const Page = () => {
                     <span className="red-text">e</span>
                   </p>
                   <div className="flex mb-4">
-                    <span className="text-yellow-400 text-4xl">★ ★ ★ ★ ★</span>
+                    <span className="text-yellow-400 text-2xl sm:text-sm md:text-2xl lg:text-4xl">
+                      ★ ★ ★ ★ ★
+                    </span>
                   </div>
                   <p className="text-sm text-gray-700 text-center">
                     "I had a great experience with this appliance repair
@@ -240,7 +243,9 @@ const Page = () => {
                     <span className="red-text">e</span>
                   </p>
                   <div className="flex mb-4">
-                    <span className="text-yellow-400 text-4xl">★ ★ ★ ★ ★</span>
+                    <span className="text-yellow-400 text-2xl sm:text-sm md:text-2xl lg:text-4xl">
+                      ★ ★ ★ ★ ★
+                    </span>
                   </div>
                   <p className="text-sm text-gray-700 text-center">
                     "Their service was fantastic! The technician was friendly
@@ -259,7 +264,9 @@ const Page = () => {
                     <span className="red-text">e</span>
                   </p>
                   <div className="flex mb-4">
-                    <span className="text-yellow-400 text-4xl">★ ★ ★ ★ ★</span>
+                    <span className="text-yellow-400 text-2xl sm:text-sm md:text-2xl lg:text-4xl">
+                      ★ ★ ★ ★ ★
+                    </span>
                   </div>
                   <p className="text-sm text-gray-700 text-center">
                     "Fast, efficient, and affordable. They got my dryer working
@@ -269,7 +276,13 @@ const Page = () => {
               </div>
             </div>
             <div className="mt-5 text-center">
-              <a href="#" className=" text-slate-600 border-b">click here to view<span className="text-red-600 border-b-red-600"> more reviews</span></a>
+              <a href="#" className=" text-slate-600 border-b">
+                click here to view
+                <span className="text-red-600 border-b-red-600">
+                  {" "}
+                  more reviews
+                </span>
+              </a>
             </div>
           </div>
         </div>
