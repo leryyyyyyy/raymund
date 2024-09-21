@@ -98,7 +98,7 @@ const Navbar = () => {
             </div>
             <div className="hidden md:flex">
               <Link
-                href="/get-started"
+                href="/quote"
                 className="primary-button md:scale-75 lg:scale-100 hover:scale-x-105 text-center"
               >
                 GET A FREE QUOTE
@@ -144,7 +144,7 @@ const Navbar = () => {
               ></span>
             </Link>
             <Link
-              href="/about"
+              href="/about-us"
               className="text-black  block px-3 py-2 rounded-md text-base font-medium group"
             >
               About
@@ -168,7 +168,7 @@ const Navbar = () => {
               Pricing
               <span className="block h-[2px] bg-gray-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </Link>
-            <Link href="/get-started" className="primary-button">
+            <Link href="/quote" className="primary-button">
               GET A FREE QOUTE
             </Link>
           </div>
