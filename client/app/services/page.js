@@ -57,7 +57,7 @@ function Page() {
           </div>
         </section>
 
-        <div className="h-auto py-8 secondary-color">
+        <div className="h-auto py-8 secondary-color text-white">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -69,10 +69,10 @@ function Page() {
                       <CountUp end={5} decimals={1} duration={2} />
                     </div>
                     <div className="text-sm md:text-base">
-                      rated from <span className="blue-text">g</span>
+                      rated from <span className="text-[#0095FF]">g</span>
                       <span className="red-text">o</span>
                       <span className="yellow-text">o</span>
-                      <span className="blue-text">g</span>
+                      <span className="text-[#0095FF]">g</span>
                       <span className="green-text">l</span>
                       <span className="red-text">e</span> reviews
                     </div>

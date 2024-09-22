@@ -9,12 +9,12 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #ffffff;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
@@ -28,20 +28,20 @@ body {
   }
 }
 .hero-image-default {
-  background-image: url('/servicesHero2.svg');
+  background-image: url("/servicesHero2.svg");
 }
 
 .hero-image-mobile {
-  background-image: url('/servicesHeroSm.png');
+  background-image: url("/servicesHeroSm.png");
 }
 
 @media (max-width: 640px) {
   .hero-image-default {
-    background-image: url('/servicesHeroSm.png');
+    background-image: url("/servicesHeroSm.png");
   }
 }
 
-.checkBoxSection{
+.checkBoxSection {
   border-radius: 50px;
 }
 
@@ -49,14 +49,13 @@ body {
 .clip-inward-curve {
   position: relative;
   clip-path: polygon(
-    0 0, /* Top left corner */
-    100% 0, /* Top right corner */
-    100% 100%, /* Bottom right corner */
-    50% 60%, /* Inward curve point */
-    0 100% /* Bottom left corner */
+    0 0,
+    /* Top left corner */ 100% 0,
+    /* Top right corner */ 100% 100%,
+    /* Bottom right corner */ 50% 60%,
+    /* Inward curve point */ 0 100% /* Bottom left corner */
   );
 }
-
 
 /* machines car images */
 /* .custom-horizontal-gap {
