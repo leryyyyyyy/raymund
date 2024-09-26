@@ -19,7 +19,7 @@ const FrequentlyAsked = () => {
           </p>
           <p className="text-base text-center">
             Can't find answers? Email us at{" "}
-            <span className="underline">blondesraymund@gmail.com</span> or call
+            <span className="underline">blonesraymund@gmail.com</span> or call
             us at 778-922-8628
           </p>
         </div>
@@ -41,7 +41,9 @@ const FrequentlyAsked = () => {
                 openIndex === 1 ? "block" : "hidden"
               } px-4 py-2 text-slate-50 transition-all duration-300 ease-in-out border-t-2 border-slate-400`}
             >
-              <p>Enter answer here.</p>
+              <p className="text-lg">
+                We proudly serve Victoria, BC, and the surrounding areas.
+              </p>
             </div>
           </div>
 
@@ -59,7 +61,12 @@ const FrequentlyAsked = () => {
                 openIndex === 2 ? "block" : "hidden"
               } px-4 py-2 text-slate-50 transition-all duration-300 ease-in-out border-t-2 border-slate-400`}
             >
-              <p>Enter answer here.</p>
+              <p className="text-lg">
+                Our diagnostic fee is $79, which is waived if the repair is
+                completed. Repairs start at $129 for basic issues. We provide a
+                full estimate before proceeding with any work, so there are no
+                surprises.
+              </p>
             </div>
           </div>
 
@@ -77,7 +84,10 @@ const FrequentlyAsked = () => {
                 openIndex === 3 ? "block" : "hidden"
               } px-4 py-2 text-slate-50 transition-all duration-300 ease-in-out border-t-2 border-slate-400`}
             >
-              <p>Enter answer here.</p>
+              <p className="text-lg">
+                Yes! If the same issue recurs within our warranty period, we
+                will address it at no additional cost.
+              </p>
             </div>
           </div>
 
@@ -95,7 +105,10 @@ const FrequentlyAsked = () => {
                 openIndex === 4 ? "block" : "hidden"
               } px-4 py-2 text-slate-50 transition-all duration-300 ease-in-out border-t-2 border-slate-400`}
             >
-              <p>Enter answer here.</p>
+              <p className="text-lg">
+                If we cannot repair your appliance after diagnosing the issue,
+                you only pay the diagnostic fee—there are no further charges.
+              </p>
             </div>
           </div>
 
@@ -113,7 +126,10 @@ const FrequentlyAsked = () => {
                 openIndex === 5 ? "block" : "hidden"
               } px-4 py-2 text-slate-50 transition-all duration-300 ease-in-out border-t-2 border-slate-400`}
             >
-              <p>Enter answer here.</p>
+              <p className="text-lg">
+                We strive for same-day or next-day service depending on
+                availability, especially for urgent repairs.
+              </p>
             </div>
           </div>
 
@@ -131,7 +147,13 @@ const FrequentlyAsked = () => {
                 openIndex === 6 ? "block" : "hidden"
               } px-4 py-2 text-slate-50 transition-all duration-300 ease-in-out border-t-2 border-slate-400`}
             >
-              <p>Enter answer here.</p>
+              <p className="text-lg">
+                The diagnostic fee ensures that you receive a comprehensive,
+                professional evaluation of your appliance problem. Our
+                technicians devote the necessary time and expertise to find the
+                root cause of the issue. This fee guarantees value for a proper
+                diagnosis and helps offset travel expenses and technician time.
+              </p>
             </div>
           </div>
         </div>

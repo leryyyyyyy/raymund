@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CountUp from "react-countup";
 import Carousel from "./components/Carousel";
+import Link from "next/link";
 
 const Page = () => {
   return (
@@ -40,7 +41,7 @@ const Page = () => {
                     LEARN MORE
                   </a>
                   <a
-                    href="#our-services"
+                    href="/services"
                     className="inline-flex items-center justify-center px-4 py-2 text-sm sm:text-base md:text-lg font-semibold primary-button hover:bg-yellow-100 hover:scale-x-105"
                   >
                     OUR SERVICES
@@ -194,9 +195,17 @@ const Page = () => {
                   approach, ensuring that every repair is handled with care,
                   precision, and integrity.
                 </p>
-                <button className="tertiary-color px-9 py-3 rounded-full shadow-md shadow-slate-500 mt-8 text-white">
+                <div className="mt-3 flex justify-center">
+                  <Link
+                    href="/about-us"
+                    className="tertiary-color px-9 py-3 rounded-full shadow-md shadow-slate-500 mt-8 text-white hover:bg-red-400 hover:text-red-950 font-bold"
+                  >
+                    OUR STORY
+                  </Link>
+                </div>
+                {/* <button className="tertiary-color px-9 py-3 rounded-full shadow-md shadow-slate-500 mt-8 text-white">
                   OUR STORY
-                </button>
+                </button> */}
               </div>
             </div>
           </div>

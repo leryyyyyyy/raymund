@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Link from "next/link";
 
 const AboutUs = () => {
   return (
@@ -23,15 +24,20 @@ const AboutUs = () => {
                 WELCOME TO
               </p>
               <p className="text-2xl sm:text-3xl lg:text-5xl text-shadow lg:mt-4 mt-2">
-                RAYMUND BLONDES
+                RAYMUND BLONES
               </p>
               <p className="roboto-font-nav font-bold text-2xl sm:text-4xl lg:text-6xl blue-text lg:mt-4 mt-2">
                 APPLIANCE REPAIR!
               </p>
             </div>
-            <button className="primary-button font-bold custom-box-shadow mt-10 sm:mt-5 hover:scale-105 text-md sm:text-xl lg:text-2xl">
-              GET A FREE QUOTE
-            </button>
+            <div className="mt-10">
+              <Link
+                href="/quote"
+                className="primary-button font-bold custom-box-shadow mt-10 sm:mt-5 hover:bg-transparent text-md sm:text-xl lg:text-2xl"
+              >
+                GET A FREE QUOTE
+              </Link>
+            </div>
           </div>
         </section>
 
@@ -42,7 +48,7 @@ const AboutUs = () => {
           </div>
           <div className="flex-1 mt-5">
             <p className="text-2xl font-bold font-inter text-white text-outline-blue text-center lg:text-left sm:text-3xl">
-              WHY CHOOSE RAYMUND BLONDES APPLIANCE REPAIR?
+              WHY CHOOSE RAYMUND BLONES APPLIANCE REPAIR?
             </p>
             <div className="mt-6 space-y-4">
               {[
@@ -81,7 +87,7 @@ const AboutUs = () => {
         <div className="flex flex-col lg:flex-row p-6 lg:p-14">
           <div className="lg:flex-none lg:w-2/3">
             <p className="text-3xl sm:text-4xl lg:text-4xl font-bold text-center lg:text-left">
-              Welcome to Raymund Blondes Appliance Repair!
+              Welcome to Raymund Blones Appliance Repair!
             </p>
             <p className="text-lg sm:text-xl leading-6 lg:leading-9 sm:leading-8 mt-5 text-justify lg:text-indent">
               I’m Raymund, and I’m thrilled to be your go-to expert for all your
@@ -168,15 +174,18 @@ const AboutUs = () => {
             ))}
           </div>
           <div className="flex justify-center mt-5">
-            <button className="primary-button font-bold custom-box-shadow mt-10 hover:scale-105 text-lg sm:text-2xl">
+            <Link
+              href="/quote"
+              className="primary-button font-bold custom-box-shadow mt-10 sm:mt-5 hover:bg-transparent text-md sm:text-xl lg:text-2xl"
+            >
               GET A FREE QUOTE
-            </button>
+            </Link>
           </div>
           <div className="text-center mt-8 roboto-font-nav flex flex-col items-center">
             <p className="text-xl sm:text-3xl font-bold">
               Thank you for considering{" "}
               <span className="blue-text">Raymund</span>{" "}
-              <span className="red-text">Blondes</span> Appliance Repair.
+              <span className="red-text">Blones</span> Appliance Repair.
             </p>
             <div className="w-full sm:w-96 mt-4">
               <p className="text-md sm:text-xl ">
