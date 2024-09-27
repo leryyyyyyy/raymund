@@ -1,3 +1,4 @@
+import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
 import React from "react";
 
@@ -44,9 +45,12 @@ const Blog1 = () => {
             prevent mold and maintain a tight seal.
           </p>
         </div>
-        <div className="mt-10">
-          <p className="Maintenance Tips:"></p>
-          <ul>
+        <div className="mt-5 flex flex-col">
+          <p className="text-lg font-bold roboto-font-nav">Maintenance Tips:</p>
+          <ul
+            style={{ listStyleType: "disc", paddingLeft: "40px" }}
+            className="space-y-4 roboto-font-nav mt-5"
+          >
             <li>
               Clean the coils at least every 6-12 months to prevent dust and
               debris build-up. Use a vacuum cleaner with a brush attachment or a
@@ -62,7 +66,74 @@ const Blog1 = () => {
             </li>
           </ul>
         </div>
+        <div className="mt-20 flex flex-col justify-center">
+          <p className="text-xl font-bold roboto-font-nav">
+            Washing Machines and Dryers
+          </p>
+        </div>
+        <div className="mt-5 flex flex-col">
+          <p className="text-lg font-bold roboto-font-nav">Maintenance Tips:</p>
+          <ul
+            style={{ listStyleType: "disc", paddingLeft: "40px" }}
+            className="space-y-4 roboto-font-nav mt-5"
+          >
+            <li>
+              <span className="font-bold">Washing Machine-</span> Clean the
+              detergent drawer and drum regularly. Run a cleaning cycle with a
+              washing machine cleaner or a mixture of white vinegar and baking
+              soda. Leave the door open between uses to allow the interior to
+              dry completely.
+            </li>
+            <li>
+              <span className="font-bold">Dryer Vents-</span> Check and clean
+              the dryer vent and lint trap after every load to prevent clogs and
+              ensure proper airflow. Periodically, inspect the venting duct to
+              ensure it’s free from lint and debris
+            </li>
+          </ul>
+        </div>
+        <div className="mt-20 flex flex-col justify-center">
+          <p className="text-xl font-bold roboto-font-nav">Ovens and Stoves</p>
+        </div>
+        <p className="text-lg font-bold roboto-font-nav mt-5 ms-3">
+          Maintenance Tips:
+        </p>
+        <div className="mt-5 flex">
+          <div className="flex-none w-1/2 flex justify-end">
+            <img src="/blog1-img2.svg"></img>
+          </div>
+          <div className="flex-1">
+            <ul
+              style={{ listStyleType: "disc", paddingLeft: "40px" }}
+              className="space-y-4 roboto-font-nav mt-5"
+            >
+              <li>
+                <span className="font-bold">Oven Cleaning-</span> Clean the oven
+                interior and racks regularly to prevent grease build-up. Use an
+                oven cleaner or a baking soda paste for stubborn stains. For
+                self-cleaning ovens, follow the manufacturer's instructions for
+                safe usage.
+              </li>
+              <li>
+                <span className="font-bold">Stove Burners- </span>
+                Regularly clean the burner grates and drip pans to prevent food
+                residue build-up. Check the burners for proper ignition and
+                flame patterns.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="my-10">
+          <p className="text-xl font-bold roboto-font-nav">Conclusion:</p>
+          <p className="roboto-font-nav">
+            Adapting your appliance maintenance to Victoria’s climate can
+            enhance their longevity and performance. For a thorough check-up or
+            if you encounter any issues, don’t hesitate to schedule a
+            professional inspection.
+          </p>
+        </div>
       </div>
+      <Footer />
     </>
   );
 };
