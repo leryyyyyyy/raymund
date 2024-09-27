@@ -12,7 +12,7 @@ const Page = () => {
       <Navbar />
       <main className="flex-grow">
         <section
-          className="bg-cover bg-center bg-no-repeat h-[75vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh]"
+          className="bg-cover  bg-no-repeat h-[75vh] sm:h-[50vh] md:h-[60vh] lg:h-[85vh]"
           style={{
             backgroundImage: "url('/image 5.png')",
           }}

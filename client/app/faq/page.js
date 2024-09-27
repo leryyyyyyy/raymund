@@ -177,7 +177,7 @@ const FrequentlyAsked = () => {
             GET A FREE QUOTE
           </button>
         </div>
-        <div className="mt-7">
+        <div className="mt-7 flex flex-col items-center">
           <p className="red-text text-3xl font-bold text-center roboto-font-nav">
             What Client Says
           </p>
@@ -187,7 +187,7 @@ const FrequentlyAsked = () => {
               and experience the difference yourself!
             </p>
           </div>
-          <div className="bg-[#FF5A5A] p-5 lg:py-10 lg:px-14 rounded-[50px] sm:mx-10 md:mx-5 lg:mx-16 my-5">
+          <div className="bg-[#FF5A5A] p-5 lg:py-10 lg:px-14 rounded-[50px] sm:mx-10 md:mx-5 lg:mx-16 my-5 max-w-7xl">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-slate-50">
               <div className="flex flex-col items-center max-w-sm mx-auto secondary-color-darker shadow-lg rounded-2xl p-6">
                 <span className="text-lg font-bold ">Kris Wilson</span>

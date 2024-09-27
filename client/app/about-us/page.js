@@ -23,7 +23,7 @@ const AboutUs = () => {
               <p className="red-text font-extrabold text-4xl sm:text-5xl lg:text-7xl mt-5 lg:mt-0">
                 WELCOME TO
               </p>
-              <p className="text-2xl sm:text-3xl lg:text-5xl text-shadow lg:mt-4 mt-2">
+              <p className="text-2xl sm:text-3xl lg:text-5xl text-shadow lg:mt-4 mt-2 ">
                 RAYMUND BLONES
               </p>
               <p className="roboto-font-nav font-bold text-2xl sm:text-4xl lg:text-6xl blue-text lg:mt-4 mt-2">
@@ -124,7 +124,7 @@ const AboutUs = () => {
                 in appliance repair across
               </p>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 lg:mt-5">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 lg:mt-5 mb-5">
               {["Manila", "Kuwait", "Dubai", "Canada"].map((city, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <img
@@ -148,7 +148,7 @@ const AboutUs = () => {
           <p className="text-2xl sm:text-5xl font-bold text-center">
             <span className="red-text">US</span> Apart
           </p>
-          <div className="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-12 justify-center mt-12">
+          <div className="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-20 justify-center mt-16">
             {[
               {
                 image: "/Family.svg",
@@ -175,7 +175,7 @@ const AboutUs = () => {
               </div>
             ))}
           </div>
-          <div className="flex justify-center mt-10">
+          <div className="flex justify-center mt-12">
             <Link
               href="/quote"
               className="primary-button font-bold custom-box-shadow mt-10 sm:mt-5 hover:bg-transparent text-md sm:text-xl lg:text-2xl"
@@ -183,7 +183,7 @@ const AboutUs = () => {
               GET A FREE QUOTE
             </Link>
           </div>
-          <div className="text-center mt-10 roboto-font-nav flex flex-col items-center">
+          <div className="text-center mt-14 roboto-font-nav flex flex-col items-center">
             <p className="text-xl sm:text-3xl font-bold">
               Thank you for considering{" "}
               <span className="blue-text">Raymund</span>{" "}

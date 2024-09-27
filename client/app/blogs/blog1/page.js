@@ -6,27 +6,35 @@ const Blog1 = () => {
   return (
     <>
       <Navbar />
-      <div className="max-w-7xl flex flex-col justify-center mx-auto">
-        <div className="mt-5">
-          <div className="secondary-color rounded-3xl pt-3 pb-14 shadow-2xl ">
-            <p className="text-5xl text-slate-50 font-bold text-center">BLOG</p>
+      <div className="max-w-6xl flex flex-col justify-center mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mt-12">
+          <div className="secondary-color rounded-3xl pt-3 pb-14 shadow-2xl">
+            <p className="text-4xl md:text-5xl text-slate-50 font-bold text-center">
+              BLOG
+            </p>
           </div>
           <div className="mt-[-40px] flex justify-center">
-            <div className="bg-slate-50 p-4 rounded-3xl  w-[594px] shadow-xl">
-              <p className="text-xl text-center roboto-font-nav">
+            <div className="bg-slate-50 p-4 rounded-3xl w-full max-w-lg shadow-xl">
+              <p className="text-md md:text-xl text-center roboto-font-nav">
                 The Ultimate Guide to Maintaining Your Home Appliances in
                 Victoria's Unique Climate
               </p>
             </div>
           </div>
         </div>
-        <div className="flex mt-20">
-          <div className="flex-none w-1/2 flex justify-center">
-            <img src="/blog1-img.svg"></img>
+
+        {/* Image and Introduction */}
+        <div className="flex flex-col md:flex-row mt-20">
+          <div className="flex-none md:w-1/2 flex justify-center">
+            <img
+              src="/blog1-img.svg"
+              className="w-full h-auto max-w-md"
+              alt="Blog 1"
+            />
           </div>
-          <div className="flex-1">
+          <div className="flex-1 mt-10 md:mt-0 md:ml-10">
             <p className="text-2xl blue-text roboto-font-nav">Introduction</p>
-            <p className="roboto-font-nav w-[471px] mt-5 text-xl leading-8">
+            <p className="roboto-font-nav mt-5 text-lg md:text-xl leading-8">
               Victoria’s climate, with its mild temperatures and high humidity,
               presents unique challenges for appliance maintenance. Proper care
               tailored to these conditions can extend the life of your
@@ -34,22 +42,26 @@ const Blog1 = () => {
             </p>
           </div>
         </div>
+
+        {/* Refrigerator Section */}
         <div className="mt-20 flex flex-col justify-center">
           <p className="text-2xl font-bold roboto-font-nav text-center">
             Refrigerators and Freezers
           </p>
-          <p className="text-xl roboto-font-nav leading-8 mt-5 ">
+          <p className="text-lg md:text-xl roboto-font-nav leading-8 mt-5">
             Victoria’s high humidity can cause excess moisture, leading to
             potential mold growth and efficiency issues. Regularly check the
             door seals for cracks and clean them with a mild soap solution to
             prevent mold and maintain a tight seal.
           </p>
         </div>
+
+        {/* Maintenance Tips for Refrigerator */}
         <div className="mt-5 flex flex-col">
           <p className="text-lg font-bold roboto-font-nav">Maintenance Tips:</p>
           <ul
-            style={{ listStyleType: "disc", paddingLeft: "40px" }}
-            className="space-y-4 roboto-font-nav mt-5"
+            style={{ listStyleType: "disc", paddingLeft: "20px" }}
+            className="space-y-4 roboto-font-nav mt-5 text-base md:text-lg"
           >
             <li>
               Clean the coils at least every 6-12 months to prevent dust and
@@ -66,16 +78,20 @@ const Blog1 = () => {
             </li>
           </ul>
         </div>
+
+        {/* Washing Machine Section */}
         <div className="mt-20 flex flex-col justify-center">
-          <p className="text-xl font-bold roboto-font-nav">
+          <p className="text-xl md:text-2xl font-bold roboto-font-nav">
             Washing Machines and Dryers
           </p>
         </div>
+
+        {/* Maintenance Tips for Washing Machines */}
         <div className="mt-5 flex flex-col">
           <p className="text-lg font-bold roboto-font-nav">Maintenance Tips:</p>
           <ul
-            style={{ listStyleType: "disc", paddingLeft: "40px" }}
-            className="space-y-4 roboto-font-nav mt-5"
+            style={{ listStyleType: "disc", paddingLeft: "20px" }}
+            className="space-y-4 roboto-font-nav mt-5 text-base md:text-lg"
           >
             <li>
               <span className="font-bold">Washing Machine-</span> Clean the
@@ -88,24 +104,34 @@ const Blog1 = () => {
               <span className="font-bold">Dryer Vents-</span> Check and clean
               the dryer vent and lint trap after every load to prevent clogs and
               ensure proper airflow. Periodically, inspect the venting duct to
-              ensure it’s free from lint and debris
+              ensure it’s free from lint and debris.
             </li>
           </ul>
         </div>
+
+        {/* Ovens and Stoves Section */}
         <div className="mt-20 flex flex-col justify-center">
-          <p className="text-xl font-bold roboto-font-nav">Ovens and Stoves</p>
+          <p className="text-xl md:text-2xl font-bold roboto-font-nav">
+            Ovens and Stoves
+          </p>
         </div>
         <p className="text-lg font-bold roboto-font-nav mt-5 ms-3">
           Maintenance Tips:
         </p>
-        <div className="mt-5 flex">
-          <div className="flex-none w-1/2 flex justify-end">
-            <img src="/blog1-img2.svg"></img>
+
+        {/* Maintenance Tips for Ovens and Stoves */}
+        <div className="mt-5 flex flex-col md:flex-row">
+          <div className="flex-none md:w-1/2 flex justify-center md:justify-end">
+            <img
+              src="/blog1-img2.svg"
+              className="w-full h-auto max-w-md"
+              alt="Blog 1 Image 2"
+            />
           </div>
-          <div className="flex-1">
+          <div className="flex-1 mt-10 md:mt-0 md:ml-10">
             <ul
-              style={{ listStyleType: "disc", paddingLeft: "40px" }}
-              className="space-y-4 roboto-font-nav mt-5"
+              style={{ listStyleType: "disc", paddingLeft: "20px" }}
+              className="space-y-4 roboto-font-nav mt-5 text-base md:text-lg"
             >
               <li>
                 <span className="font-bold">Oven Cleaning-</span> Clean the oven
@@ -123,9 +149,11 @@ const Blog1 = () => {
             </ul>
           </div>
         </div>
+
+        {/* Conclusion */}
         <div className="my-10">
           <p className="text-xl font-bold roboto-font-nav">Conclusion:</p>
-          <p className="roboto-font-nav">
+          <p className="roboto-font-nav text-base md:text-lg">
             Adapting your appliance maintenance to Victoria’s climate can
             enhance their longevity and performance. For a thorough check-up or
             if you encounter any issues, don’t hesitate to schedule a

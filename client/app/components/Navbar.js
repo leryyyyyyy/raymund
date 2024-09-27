@@ -91,7 +91,18 @@ const Navbar = () => {
                 PRICING
                 <span
                   className={`block h-[2px] bg-gray-500 transform ${
-                    isActive("/.") ? "scale-x-100" : "scale-x-0"
+                    isActive("/pricing") ? "scale-x-100" : "scale-x-0"
+                  } group-hover:scale-x-100 transition-transform duration-300`}
+                ></span>
+              </Link>
+              <Link
+                href="/faq"
+                className="text-black  px-3 py-2 rounded-md group"
+              >
+                FAQs
+                <span
+                  className={`block h-[2px] bg-gray-500 transform ${
+                    isActive("/faq") ? "scale-x-100" : "scale-x-0"
                   } group-hover:scale-x-100 transition-transform duration-300`}
                 ></span>
               </Link>
