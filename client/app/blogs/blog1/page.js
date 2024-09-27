@@ -6,7 +6,7 @@ const Blog1 = () => {
   return (
     <>
       <Navbar />
-      <div className="lg:p-10">
+      <div className="max-w-7xl flex flex-col justify-center mx-auto">
         <div className="mt-5">
           <div className="secondary-color rounded-3xl pt-3 pb-14 shadow-2xl ">
             <p className="text-5xl text-slate-50 font-bold text-center">BLOG</p>
