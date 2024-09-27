@@ -100,13 +100,13 @@ function Page() {
   return (
     <div className="flex flex-col min-h-screen roboto-font-nav">
       <Navbar />
-      <main className={`relative ${loading ? "opacity-50" : "opacity-100"}`}>
+      <main className={`relative ${loading ? "opacity-50" : "opacity-100 "}`}>
         <div
           className={`h-auto py-8 roboto-font-nav ${
             message.show ? "blur-sm" : ""
           }`}
         >
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 bg-white">
             <div className="text-center mb-8">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-black">
                 Need a Repair? Get a <span className="blue-text">Free</span>

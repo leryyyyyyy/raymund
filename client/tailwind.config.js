@@ -20,6 +20,10 @@ module.exports = {
       screens: {
         xs: "360px",
       },
+      backgroundImage: {
+        "custom-gradient":
+          "linear-gradient(to right, #4158D0 0%, #C850C0 46%, #FFCC70 100%)",
+      },
     },
   },
   plugins: [

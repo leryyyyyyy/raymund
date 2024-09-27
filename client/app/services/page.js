@@ -122,17 +122,17 @@ function Page() {
           </div>
         </div>
 
-        <div className="h-auto py-8 roboto-font-nav ">
+        <div className="h-auto py-8 roboto-font-nav lg:mt-10 ">
           <div className="container mx-auto px-4">
             <div className="text-center mb-8">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-black">
                 <span className="blue-text">Top Appliances </span>
                 <span className="red-text">We Repair</span>
               </h2>
-              <p className="text-sm md:text-base text-black">
+              <p className="text-sm md:text-lg text-black">
                 We repair a wide range of brands.
               </p>
-              <p className="text-sm md:text-base text-black">
+              <p className="text-sm md:text-lg text-black">
                 Here are some of the top brands we work with:
               </p>
             </div>
@@ -180,7 +180,7 @@ function Page() {
           </div>
         </div>
 
-        <div className="h-auto py-8 roboto-font-nav ">
+        <div className="h-auto py-8 roboto-font-nav lg:mt-10 ">
           <div className="container mx-auto px-4">
             <div className="text-center mb-8">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-black">

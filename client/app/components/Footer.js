@@ -45,11 +45,15 @@ const Footer = () => {
   };
 
   return (
-    <footer className="primary-color text-black  mt-auto border-t-2 border-t-black">
+    <footer className="primary-color text-black mt-auto border-t-[1px] border-t-black">
       <div className="max-w-fit py-16 mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-52">
+          {" "}
+          {/* Increased gap from 8 to 12 */}
           {/* Section 1: Address and Google Maps */}
-          <div className="flex flex-col space-y-4 lg:col-span-2">
+          <div className="flex flex-col space-y-4 lg:col-span-2 p-4">
+            {" "}
+            {/* Added padding */}
             <div className="text-lg font-semibold">Location</div>
             <p>3914 Shelbourne St., Victoria, BC, Canada V8P 4J1</p>
             <div className="w-full h-80 relative">
@@ -61,60 +65,17 @@ const Footer = () => {
               ></iframe>
             </div>
           </div>
-
           {/* Section 2: Contacts and Feedback */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 p-4">
+            {" "}
+            {/* Added padding */}
             <div className="text-xl font-semibold">Contacts</div>
             <a href="mailto:blonesraymund@gmail.com" className="m-1 underline">
               blonesraymund@gmail.com
             </a>
             <p className="m-1">778-922-8628</p>
-
-            <form onSubmit={handleFeedbackSubmit} className="mt-4">
-              <div className="text-xl font-semibold">Send Us Your Feedback</div>
-              <p>
-                Your feedback helps us serve you better! Send us through email.
-              </p>
-              <textarea
-                value={feedback}
-                onChange={handleFeedbackChange}
-                rows="4"
-                className="w-full p-2 mt-1 border border-gray-600 rounded-md"
-                placeholder="Message..."
-                required
-              ></textarea>
-              <button
-                type="submit"
-                className="mt-2 px-4 py-2 footer-button"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? "Submitting..." : "Submit"}
-              </button>
-            </form>
-
-            {successMessage && (
-              <p className="green-text mt-2">{successMessage}</p>
-            )}
-            {errorMessage && <p className="red-text mt-2">{errorMessage}</p>}
-          </div>
-
-          {/* Section 3: About and Social Media */}
-          <div className="space-y-4 lg:col-span-1">
-            <div className="text-xl font-semibold">About</div>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/contacts" className="hover:underline">
-                  Contacts
-                </Link>
-              </li>
-              <li>
-                <Link href="/reviews" className="hover:underline">
-                  Reviews
-                </Link>
-              </li>
-            </ul>
-            <div className="text-xl font-semibold">Follow Us</div>
-            <div className="flex space-x-4">
+            <div className="mt-10 text-xl font-semibold">Follow Us</div>
+            <div className="flex flex-col space-y-2">
               <a
                 href="https://facebook.com"
                 className="hover:text-blue-500 underline"
@@ -148,6 +109,28 @@ const Footer = () => {
                 LinkedIn
               </a>
             </div>
+            {successMessage && (
+              <p className="green-text mt-2">{successMessage}</p>
+            )}
+            {errorMessage && <p className="red-text mt-2">{errorMessage}</p>}
+          </div>
+          {/* Section 3: About and Social Media */}
+          <div className="space-y-4 lg:col-span-1 p-4">
+            {" "}
+            {/* Added padding */}
+            <div className="text-xl font-semibold">About</div>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/contacts" className="hover:underline">
+                  Contacts
+                </Link>
+              </li>
+              <li>
+                <Link href="/reviews" className="hover:underline">
+                  Reviews
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
