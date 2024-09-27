@@ -7,9 +7,9 @@ const AboutUs = () => {
   return (
     <>
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow ">
         {/* Section 1 */}
-        <section className="relative flex flex-col lg:flex-row lg:h-[75vh] sm:h-[50vh] md:h-[60vh]">
+        <section className="relative flex flex-col lg:flex-row lg:h-[75vh] sm:h-[50vh] md:h-[60vh] max-w-7xl mx-auto">
           <div
             className="absolute inset-0 bg-contain bg-right bg-no-repeat sm:blur-none blur-sm"
             style={{
@@ -42,11 +42,11 @@ const AboutUs = () => {
         </section>
 
         {/* Section 2 */}
-        <div className="tertiary-color flex flex-col lg:flex-row p-6 lg:p-3">
-          <div className="flex-1 lg:p-8 p-2 flex justify-center">
+        <div className="secondary-color flex flex-col lg:flex-row p-6 lg:p-3">
+          <div className="flex-1 lg:p-8 p-2 flex justify-end">
             <img src="/about-2-img.svg" className="pt-5 sm:scale-90" />
           </div>
-          <div className="flex-1 mt-5">
+          <div className="flex-1 mt-7">
             <p className="text-2xl font-bold font-inter text-white text-outline-blue text-center lg:text-left sm:text-3xl">
               WHY CHOOSE RAYMUND BLONES APPLIANCE REPAIR?
             </p>
@@ -84,7 +84,7 @@ const AboutUs = () => {
         </div>
 
         {/* Section 3 */}
-        <div className="flex flex-col lg:flex-row p-6 lg:p-14">
+        <div className="flex flex-col lg:flex-row p-6 lg:p-14 max-w-7xl mx-auto">
           <div className="lg:flex-none lg:w-2/3">
             <p className="text-3xl sm:text-4xl lg:text-4xl font-bold text-center lg:text-left">
               Welcome to Raymund Blones Appliance Repair!
@@ -111,30 +111,32 @@ const AboutUs = () => {
 
         {/* Section 4 */}
         <div
-          className="bg-cover bg-center bg-no-repeat h-auto  px-6 py-4"
+          className="bg-cover bg-center bg-no-repeat h-auto  px-6 py-4 "
           style={{ backgroundImage: "url('/about-4-img.svg')" }}
           aria-label="Background image showing appliance repair services"
         >
-          <div className="text-center p-6 lg:p-10">
-            <p className="text-xl sm:text-4xl text-white font-bold">
-              Extensive Experience
-            </p>
-            <p className="mt-0 text-lg sm:text-2xl italic text-white">
-              in appliance repair across
-            </p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 lg:mt-5">
-            {["Manila", "Kuwait", "Dubai", "Canada"].map((city, index) => (
-              <div key={index} className="flex flex-col items-center">
-                <img
-                  src={`/about-4-${city.toLowerCase()}.svg`}
-                  className="h-[150px] w-auto sm:h-[200px] lg:h-[246px]"
-                />
-                <p className="text-xl sm:text-2xl lg:text-3xl text-white font-bold text-center">
-                  {city}
-                </p>
-              </div>
-            ))}
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center p-6 lg:p-10">
+              <p className="text-xl sm:text-4xl text-white font-bold">
+                Extensive Experience
+              </p>
+              <p className="mt-0 text-lg sm:text-2xl italic text-white">
+                in appliance repair across
+              </p>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 lg:mt-5">
+              {["Manila", "Kuwait", "Dubai", "Canada"].map((city, index) => (
+                <div key={index} className="flex flex-col items-center">
+                  <img
+                    src={`/about-4-${city.toLowerCase()}.svg`}
+                    className="h-[150px] w-auto sm:h-[200px] lg:h-[246px]"
+                  />
+                  <p className="text-xl sm:text-2xl lg:text-3xl text-white font-bold text-center">
+                    {city}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -173,7 +175,7 @@ const AboutUs = () => {
               </div>
             ))}
           </div>
-          <div className="flex justify-center mt-5">
+          <div className="flex justify-center mt-10">
             <Link
               href="/quote"
               className="primary-button font-bold custom-box-shadow mt-10 sm:mt-5 hover:bg-transparent text-md sm:text-xl lg:text-2xl"
@@ -181,13 +183,13 @@ const AboutUs = () => {
               GET A FREE QUOTE
             </Link>
           </div>
-          <div className="text-center mt-8 roboto-font-nav flex flex-col items-center">
+          <div className="text-center mt-10 roboto-font-nav flex flex-col items-center">
             <p className="text-xl sm:text-3xl font-bold">
               Thank you for considering{" "}
               <span className="blue-text">Raymund</span>{" "}
               <span className="red-text">Blones</span> Appliance Repair.
             </p>
-            <div className="w-full sm:w-96 mt-4">
+            <div className="w-full sm:w-96 mt-6">
               <p className="text-md sm:text-xl ">
                 I look forward to providing you with exceptional service and
                 keeping your appliances in top shape!
