@@ -93,6 +93,9 @@ module.exports = {
         ".tertiary-color": {
           backgroundColor: "#FF3131 ", //! changed color
         },
+        ".tertiary-color2": {
+          backgroundColor: "#FA1111 ", //! changed color
+        },
         ".blue-text": {
           color: "#004AAD ", //! changed color
         },
