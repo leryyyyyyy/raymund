@@ -300,7 +300,9 @@ const Page = () => {
             <div className="mt-5 text-center lg:mb-5">
               <a
                 href="https://maps.app.goo.gl/L2GsCpHTx6BfuigUA"
-                className=" text-slate-600 border-b"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-600 border-b"
               >
                 click here to view &nbsp;
                 <span className="text-red-600 border-b-red-600">
