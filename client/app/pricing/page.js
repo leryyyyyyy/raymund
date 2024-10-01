@@ -364,7 +364,7 @@ function Page() {
                     </div>
                     <div className="flex flex-col items-center">
                       <img
-                        src="/weAccept/interac.png"
+                        src="/weAccept/Interac.png"
                         alt="Payment Method 6"
                         className="w-12 sm:w-16 md:w-36 h-auto"
                       />
