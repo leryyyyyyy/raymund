@@ -67,7 +67,7 @@ body {
 }
 
 .loader {
-  border-color: #f81818 transparent transparent transparent;
+  border-color: #f3f3f3 transparent transparent transparent;
   border-style: solid;
   border-width: 6px;
   animation: spin 1s linear infinite;
