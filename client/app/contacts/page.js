@@ -218,7 +218,7 @@ const Page = () => {
                     </button>
                   </div>
 
-                  <p className="text-gray-300 text-sm text-center mt-2">
+                  <p className="text-gray-300 text-sm text-center mt-2  ">
                     We respect your privacy. The information provided is used
                     only to respond to your inquiry and arrange your service. We
                     do not share your data with third parties.
