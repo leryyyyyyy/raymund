@@ -46,8 +46,8 @@ const Footer = () => {
 
   return (
     <footer className="primary-color text-black mt-auto border-t-[1px] border-t-black">
-      <div className="max-w-fit py-16 mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-52">
+      <div className="max-w-fit py-1 mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-32">
           {" "}
           {/* Increased gap from 8 to 12 */}
           {/* Section 1: Address and Google Maps */}
@@ -126,7 +126,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/reviews" className="hover:underline">
+                <Link href="/#ourReviews" className="hover:underline">
                   Reviews
                 </Link>
               </li>

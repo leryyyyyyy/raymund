@@ -1,15 +1,78 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 function Page() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [userEmail, setUserEmail] = useState("");
+  const [selectedPlan, setSelectedPlan] = useState("");
+
+  const handleButtonClick = (plan) => {
+    setSelectedPlan(plan); // Set the selected plan
+    setIsFormOpen(true); // Open the form
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Define a message based on the selected plan
+    const planMessages = {
+      "Basic Repair":
+        "Thank you for choosing our Basic Repair plan. We will provide a clear estimate before any work begins, ensuring transparency and trust.",
+      "Diagnostic Fee":
+        "Thank you for selecting our Diagnostic Fee plan. This fee covers a comprehensive assessment to ensure your appliance receives a thorough inspection.",
+      "Preventive Maintenance":
+        "Thank you for your interest in our Preventive Maintenance package. This plan is designed to help prevent unexpected breakdowns and extend the life of your appliance.",
+    };
+
+    // Prepare the message for the user
+    const userMessage =
+      planMessages[selectedPlan] ||
+      "Thank you for your interest! We appreciate your inquiry and will respond shortly.";
+
+    // Send email logic here
+    const emailData = {
+      to: userEmail,
+      subject: `Your Plan Request: ${selectedPlan}`,
+      text: userMessage,
+    };
+
+    // Send email to the user
+    await fetch("/api/selectedPlan", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(emailData),
+    });
+
+    // Optionally send a notification to the company
+    const companyEmailData = {
+      to: userEmail,
+      subject: "New Plan Request",
+      text: `A new user has requested the ${selectedPlan} plan.\n\nPlease follow up with them at your earliest convenience.`,
+    };
+
+    await fetch("/api/planReceived", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(companyEmailData),
+    });
+
+    // Close the form and reset the email input
+    setIsFormOpen(false);
+    setUserEmail("");
+  };
+
   return (
     <div className="flex flex-col min-h-screen roboto-font-nav">
       <Navbar />
       <main className="flex-grow">
-        <div className="h-auto py-8 roboto-font-nav">
-          <div className="container mx-auto px-4">
+        <div className="h-auto py-8 roboto-font-nav mb-10">
+          <div className="container mx-auto ">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-black">
                 <span className="red-text">REPAIR </span>
@@ -20,22 +83,20 @@ function Page() {
                 fixed, you’ll only pay the
               </p>
               <p className="text-md md:text-lg text-black">
-                diagnostic fee—no additional charges.
+                diagnostic fee—{" "}
+                <span className=" font-bold">no additional charges.</span>
               </p>
             </div>
+          </div>
 
-            <div className="relative w-full flex flex-col md:flex-row items-center justify-center overflow-hidden ">
-              {/* <div
-              className="relative bg-cover bg-center bg-no-repeat h-[80vh] sm:h-[55vh] md:h-[65vh] lg:h-[100vh] flex items-center justify-center"
-              style={{
-                backgroundImage: "url('/Intersect.png')",
-              }}
-              aria-label="Background image showing appliance repair services"
-            > */}
-              <div className="flex flex-col md:flex-row w-full px-4 max-w-7xl ">
+          <div className="h-auto mx-auto md:mx-8 pb-2 roboto-font-nav bg-[#FA1111] md:bg-[url('/Intersect.png')] md:bg-transparent bg-cover bg-center mt-3">
+            <div className="relative w-full flex flex-col md:flex-row items-center justify-center overflow-hidden">
+              <div className="flex flex-col md:flex-row w-full max-w-7xl">
                 {/* Left Box */}
-                <div className="flex-1 bg-white p-6 shadow-md h-auto md:h-[65rem] lg:h-[55rem]  text-center border-2">
-                  <h3 className="text-xl md:text-2xl mb-4">Repair starts @</h3>
+                <div className="flex-1 bg-white p-6 shadow-xl mt-2 h-auto md:h-[80rem] lg:h-[55rem] xl:h-[45rem] md:mt-36 text-center border-2 max-w-xs md:max-w-md mx-auto order-1 md:order-1">
+                  <h3 className="text-xl md:text-2xl mb-4 font-bold">
+                    Repair starts @
+                  </h3>
                   <div className="flex justify-center items-start mb-5">
                     <div className="flex justify-center items-center">
                       <span className="text-4xl md:text-3xl lg:text-3xl blue-text">
@@ -59,17 +120,24 @@ function Page() {
                     (waived if the repair is completed).
                   </p>
                   <div className="flex justify-center">
-                    <button className="submit-button font-bold my-5 md:my-44 custom-box-shadow hover:scale-105 text-lg sm:text-xl md:text-2xl p-2">
+                    <button
+                      onClick={() => handleButtonClick("Basic Repair")}
+                      className="submit-button font-bold my-5 md:my-44 custom-box-shadow hover:scale-105 text-lg sm:text-xl md:text-2xl p-2"
+                    >
                       GET THIS OFFER
                     </button>
                   </div>
                 </div>
 
                 {/* Middle Box (Larger) */}
-                <div className="flex-1 secondary-color text-white p-8 shadow-md h-auto md:h-[70rem] lg:h-[60rem]  text-center ">
-                  <h3 className="text-xl md:text-2xl mb-4">Diagnostic Fee</h3>
-                  <h3 className="text-xl md:text-2xl mb-4">Starts @</h3>
-                  <div className="flex justify-center items-start mb-5">
+                <div className="flex-1 secondary-color text-white p-20 shadow-2xl h-auto md:h-[90rem] lg:h-[70rem] xl:h-[57rem] mt-2 text-center max-w-md mx-auto order-3 md:order-2">
+                  <h3 className="text-xl md:text-2xl md:mt-[-2rem] font-bold">
+                    Diagnostic Fee
+                  </h3>
+                  <h3 className="text-xl md:text-2xl mb-4 font-bold">
+                    Starts @
+                  </h3>
+                  <div className="flex justify-center items-start mb-2">
                     <div className="flex justify-center items-center">
                       <span className="text-4xl md:text-3xl lg:text-3xl">
                         $
@@ -80,7 +148,7 @@ function Page() {
                     </div>
                   </div>
                   <p className="text-base md:text-lg mb-5">PROMO</p>
-                  <p className="text-base md:text-lg mb-5 ">
+                  <p className="text-base md:text-lg mb-5">
                     The diagnostic fee is a flat rate, covering travel and a
                     full assessment. Once the diagnosis is complete, this fee is
                     applied toward the total repair cost, based on the
@@ -96,15 +164,20 @@ function Page() {
                     making it a smart investment in your appliance’s health.
                   </p>
                   <div className="flex justify-center">
-                    <button className="primary-button font-bold custom-box-shadow my-16 hover:scale-105 text-lg sm:text-xl md:text-2xl p-2">
+                    <button
+                      onClick={() => handleButtonClick("Diagnostic Fee")}
+                      className="primary-button font-bold custom-box-shadow my-4 hover:scale-105 text-lg sm:text-xl md:text-2xl p-2 outline-none"
+                    >
                       GET THIS OFFER
                     </button>
                   </div>
                 </div>
 
                 {/* Right Box */}
-                <div className="flex-1 bg-white p-6 shadow-md h-auto md:h-[65rem] lg:h-[55rem]  text-center border-2">
-                  <h3 className="text-xl md:text-2xl mb-4">Repair starts @</h3>
+                <div className="flex-1 bg-white p-6 shadow-xl h-auto md:h-[80rem] lg:h-[55rem] xl:h-[45rem] mt-2 md:mt-36 text-center border-2 max-w-sm md:max-w-md mx-auto order-2 md:order-3 ">
+                  <h3 className="text-xl md:text-2xl mb-4 font-bold">
+                    Repair starts @
+                  </h3>
                   <div className="flex justify-center items-start mb-5">
                     <div className="flex justify-center items-center">
                       <span className="text-4xl md:text-3xl lg:text-3xl blue-text">
@@ -136,21 +209,33 @@ function Page() {
                   <ul className="list-none text-left ml-5 mb-5">
                     <li>- Prevent unexpected breakdowns</li>
                     <li>- Extend the lifespan of your appliances</li>
-                    <li>- Enhance efficiency and performance  </li>
+                    <li>- Enhance efficiency and performance</li>
                   </ul>
                   <div className="flex justify-center">
-                    <button className="submit-button font-bold my-5 custom-box-shadow hover:scale-105 text-lg sm:text-xl md:text-xl p-2 ">
+                    <button
+                      onClick={() =>
+                        handleButtonClick("Preventive Maintenance")
+                      }
+                      className="submit-button font-bold my-5 custom-box-shadow hover:scale-105 text-lg sm:text-xl md:text-xl p-2"
+                    >
                       GET THIS OFFER
                     </button>
                   </div>
                   <p className="text-gray-400 font-normal">
                     Note: This package excludes any necessary replacement parts.
-                    Our technician will inform you of additional costs if needed
+                    Our technician will inform you of additional costs if
+                    needed.
                   </p>
                 </div>
               </div>
             </div>
+          </div>
+          <p className="text-center hidden md:block">
+            Invest in our maintenance package to keep your appliances running
+            smoothly and avoid costly repairs!
+          </p>
 
+          <div className="max-w-7xl mx-10 md:mx-10 lg:mx-auto  ">
             <p className="my-10 text-sm sm:text-base md:text-lg">
               Our diagnostic fee is a simple, upfront charge that covers both
               travel and a comprehensive assessment of your appliance. The best
@@ -169,9 +254,10 @@ function Page() {
                 making it a smart investment in your appliance’s health.
               </p>
             </div>
-
-            {/* Payment Options Section */}
-            <div className="flex flex-col md:flex-row mt-8">
+          </div>
+          {/* Payment Options Section */}
+          <div className=" max-w-7xl mx-10 md:mx-10 lg:mx-auto ">
+            <div className="flex flex-col md:flex-row mt-8 md:mx-10">
               {/* Combined Box */}
               <div className="flex flex-1 flex-col md:flex-row bg-gray-200 rounded-3xl shadow-md overflow-hidden border border-gray-300">
                 {/* Left Box - Payment Option */}
@@ -185,7 +271,7 @@ function Page() {
                     </p>
                   </div>
 
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:text-center">
                     <div className="flex flex-col items-center">
                       <img
                         src="debit.png"
@@ -288,6 +374,38 @@ function Page() {
               </div>
             </div>
           </div>
+          {isFormOpen && (
+            <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+              <div className="bg-white p-6 rounded shadow-md w-96">
+                <h2 className="text-xl font-bold mb-4">Enter Your Email</h2>
+                <form onSubmit={handleSubmit}>
+                  <input
+                    type="email"
+                    value={userEmail}
+                    onChange={(e) => setUserEmail(e.target.value)}
+                    placeholder="Your Email"
+                    required
+                    className="border rounded p-2 w-full mb-4"
+                  />
+                  <div className="flex justify-between">
+                    <button
+                      type="button"
+                      onClick={() => setIsFormOpen(false)}
+                      className="border rounded p-2 bg-gray-300 hover:bg-gray-400"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      type="submit"
+                      className="bg-blue-500 text-white rounded p-2 hover:bg-blue-600"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          )}
         </div>
       </main>
       <Footer />

@@ -20,7 +20,7 @@ const AboutUs = () => {
 
           <div className="relative lg:top-24 text-center lg:left-14 sm:text-left lg:text-left p-6 lg:p-0 ">
             <div className="md:space-y-2">
-              <p className="red-text font-extrabold text-4xl sm:text-5xl lg:text-7xl mt-5 lg:mt-0">
+              <p className="red-text font-raleway no-decoration font-bold text-4xl sm:text-5xl lg:text-7xl mt-5 lg:mt-0">
                 WELCOME TO
               </p>
               <p className="text-2xl sm:text-3xl lg:text-5xl text-shadow lg:mt-4 mt-2 ">
@@ -47,7 +47,7 @@ const AboutUs = () => {
             <img src="/about-2-img.svg" className="pt-5 sm:scale-90" />
           </div>
           <div className="flex-1 mt-7">
-            <p className="text-2xl font-bold font-inter text-white text-outline-blue text-center lg:text-left sm:text-3xl">
+            <p className="text-2xl font-bold  font-inter text-white  text-center lg:text-left sm:text-3xl">
               WHY CHOOSE RAYMUND BLONES APPLIANCE REPAIR?
             </p>
             <div className="mt-6 space-y-4">
@@ -70,7 +70,7 @@ const AboutUs = () => {
                 },
               ].map(({ title, text }, index) => (
                 <div className="flex" key={index}>
-                  <img src="/Check Mark.svg" className="w-10 h-10 mr-4" />
+                  <img src="/Check Mark.svg" className="w-15 h-15 mr-4" />
                   <div>
                     <p className="text-xl font-semibold font-inter text-white">
                       {title}
@@ -86,7 +86,7 @@ const AboutUs = () => {
         {/* Section 3 */}
         <div className="flex flex-col lg:flex-row p-6 lg:p-14 max-w-7xl mx-auto">
           <div className="lg:flex-none lg:w-2/3">
-            <p className="text-3xl sm:text-4xl lg:text-4xl font-bold text-center lg:text-left">
+            <p className="text-3xl sm:text-4xl lg:text-3xl font-bold text-center lg:text-left">
               Welcome to Raymund Blones Appliance Repair!
             </p>
             <p className="text-lg sm:text-xl leading-6 lg:leading-9 sm:leading-8 mt-5 text-justify lg:text-indent">

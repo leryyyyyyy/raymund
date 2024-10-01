@@ -34,7 +34,7 @@ const Blog1 = () => {
           </div>
           <div className="flex-1 mt-10 md:mt-0 md:ml-10">
             <p className="text-2xl blue-text roboto-font-nav">Introduction</p>
-            <p className="roboto-font-nav mt-5 text-lg md:text-xl leading-8">
+            <p className="roboto-font-nav mt-5 text-lg md:text-xl leading-8 text-justify">
               Before reaching out to a repair technician, there are several
               troubleshooting steps you can take to resolve common appliance
               problems. These steps may help you avoid unnecessary service calls
@@ -48,19 +48,17 @@ const Blog1 = () => {
           <p className="text-2xl font-bold roboto-font-nav text-center">
             Washing Machines
           </p>
-          <p className="font-bold text-lg md:text-xl roboto-font-nav leading-8 mt-5">
+          <p className="font-bold text-lg md:text-xl roboto-font-nav leading-8 mt-5 md:mt-10">
             Issue: Washine machine won't start.
           </p>
         </div>
 
         {/* Troubleshooting Steps for Washing Machine */}
-        <div className="mt-5 flex flex-col">
-          <p className="text-lg font-bold roboto-font-nav">
-            Troubleshooting Steps:
-          </p>
+        <div className="mt-5 flex flex-col md:mt-10">
+          <p className="text-lg  roboto-font-nav">Troubleshooting Steps:</p>
           <ul
             style={{ listStyleType: "disc", paddingLeft: "20px" }}
-            className="space-y-4 roboto-font-nav mt-5 text-base md:text-lg"
+            className="space-y-4 roboto-font-nav mt-5 text-base md:text-lg ms-8 text-justify"
           >
             <li>
               Power Supply: Ensure the machine is plugged in and the outlet is
@@ -85,7 +83,7 @@ const Blog1 = () => {
 
         {/* Dishwashers Section */}
         <div className="mt-20 flex flex-col justify-center">
-          <p className="text-xl md:text-2xl font-bold roboto-font-nav">
+          <p className="text-xl md:text-2xl font-bold roboto-font-nav md:mb-5">
             Dishwashers
           </p>
           <p className="text-lg md:text-lg roboto-font-nav">
@@ -94,13 +92,11 @@ const Blog1 = () => {
         </div>
 
         {/* Troubleshooting Steps for Dishwashers */}
-        <div className="mt-5 flex flex-col">
-          <p className="text-lg font-bold roboto-font-nav">
-            Troubleshooting Steps:
-          </p>
+        <div className="mt-2 flex flex-col">
+          <p className="text-lg roboto-font-nav">Troubleshooting Steps:</p>
           <ul
             style={{ listStyleType: "disc", paddingLeft: "20px" }}
-            className="space-y-4 roboto-font-nav mt-5 text-base md:text-lg"
+            className="space-y-4 roboto-font-nav mt-5 text-base md:text-lg ms-8 text-justify"
           >
             <li>
               <span className="font-bold">Step 1: </span> Inspect the spray arms
@@ -136,12 +132,12 @@ const Blog1 = () => {
           </p>
         </div>
         <div className="flex flex-col">
-          <p className="text-lg font-bold roboto-font-nav mt-5 ms-3">
+          <p className="text-lg  roboto-font-nav mt-5 ms-3">
             Troubleshooting Steps
           </p>
           <ul
             style={{ listStyleType: "disc", paddingLeft: "20px" }}
-            className="space-y-4 roboto-font-nav mt-5 text-base md:text-lg"
+            className="space-y-4 roboto-font-nav mt-5 text-base md:text-lg ms-8 text-justify"
           >
             <li>
               <span className="font-bold">Step 1: </span> Ensure the oven is
@@ -167,16 +163,14 @@ const Blog1 = () => {
 
         {/* General Safety Tips */}
         <div className="mt-20 flex flex-col justify-center">
-          <p className="text-xl md:text-2xl font-bold roboto-font-nav">
+          <p className="text-xl md:text-2xl font-bold roboto-font-nav ms-8 ">
             General Safety Tips
           </p>
         </div>
-        <p className="text-lg font-bold roboto-font-nav mt-5 ms-3">
-          Troubleshooting Steps
-        </p>
+
         <ul
           style={{ listStyleType: "disc", paddingLeft: "20px" }}
-          className="space-y-4 roboto-font-nav mt-5 text-base md:text-lg"
+          className="space-y-4 roboto-font-nav mt-5 text-base md:text-lg ms-8 text-justify"
         >
           <li>
             <span className="font-bold">Power Off: </span> Always disconnect
@@ -192,8 +186,8 @@ const Blog1 = () => {
 
         {/* Conclusion */}
         <div className="my-10">
-          <p className="text-xl font-bold roboto-font-nav">Conclusion:</p>
-          <p className="roboto-font-nav text-base md:text-lg">
+          <p className="text-xl font-bold roboto-font-nav ms-8 ">Conclusion:</p>
+          <p className="roboto-font-nav text-base md:text-lg ms-8 text-justify">
             Effective troubleshooting can resolve minor issues and save you from
             unnecessary repairs. If the problem persists despite your efforts,
             our professional repair services are available to help.

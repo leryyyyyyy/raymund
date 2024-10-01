@@ -29,7 +29,7 @@ function Page() {
           <div>
             <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
               <div className="mr-auto place-self-center lg:col-span-7 pt-10 sm:pt-16 md:pt-20">
-                <h1 className="max-w-2xl mb-4 sm:mb-6 md:mb-8 font-extrabold tracking-tight text-3xl sm:text-3xl md:text-6xl xl:text-7xl dark:text-white whitespace-nowrap">
+                <h1 className="max-w-2xl mb-4 sm:mb-6 md:mb-8 lg:font-extrabold tracking-tight text-3xl sm:text-3xl md:text-6xl xl:text-8xl dark:text-white whitespace-nowrap">
                   <span className="inline-block text-black px-4 py-3">
                     <span className="block">TOP TIER</span>
                     <span className="block blue-text">QUALITY</span>
@@ -40,16 +40,16 @@ function Page() {
 
                 <div className="flex flex-wrap gap-4 mt-4">
                   <a
-                    href="#get-started"
+                    href="/quote"
                     className="inline-flex items-center justify-center px-4 py-2 text-sm sm:text-base md:text-lg font-semibold primary-button"
                   >
-                    GET STARTED
+                    GET A FREE QUOTE
                   </a>
                   <a
-                    href="#our-services"
-                    className="inline-flex items-center justify-center px-4 py-2 text-sm sm:text-base md:text-lg font-semibold primary-button"
+                    href="/about-us"
+                    className=" secondary-button inline-flex [#FF3131] items-center justify-center px-4 py-2 text-sm sm:text-base md:text-lg font-semibold "
                   >
-                    OUR SERVICES
+                    GET TO KNOW US
                   </a>
                 </div>
               </div>
@@ -63,9 +63,9 @@ function Page() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {/* First section */}
                 <div className="flex md:items-center lg:items-start px-4 sm:px-8 lg:px-16">
-                  <div className="w-2 h-10 bg-yellow-500 mr-4"></div>
+                  <div className="w-2 h-12 bg-yellow-500 mr-4"></div>
                   <div className="flex flex-col">
-                    <div className="text-3xl md:text-4xl font-bold mb-2">
+                    <div className="text-3xl md:text-5xl font-bold mb-2">
                       <CountUp end={5} decimals={1} duration={2} />
                     </div>
                     <div className="text-sm md:text-base">
@@ -81,9 +81,9 @@ function Page() {
 
                 {/* Second section */}
                 <div className="flex md:items-center lg:items-start px-4 sm:px-8 lg:px-16">
-                  <div className="w-2 h-10 bg-yellow-500 mr-4"></div>
+                  <div className="w-3 h-12 bg-yellow-500 mr-4"></div>
                   <div className="flex flex-col">
-                    <div className="text-3xl md:text-4xl font-bold mb-2">
+                    <div className="text-3xl md:text-5xl font-bold mb-2">
                       <CountUp end={10} duration={2} />+
                     </div>
                     <div className="text-sm md:text-base">
@@ -94,10 +94,10 @@ function Page() {
 
                 {/* Third section */}
                 <div className="flex md:items-center lg:items-start px-4 sm:px-8 lg:px-16">
-                  <div className="w-2 h-10 bg-yellow-500 mr-4"></div>
+                  <div className="w-4 h-12 bg-yellow-500 mr-4 "></div>
                   <div className="flex flex-col">
-                    <div className="text-3xl md:text-4xl font-bold mb-2">
-                      <CountUp end={5} duration={2} />+
+                    <div className="text-3xl md:text-5xl font-bold mb-2">
+                      <CountUp end={3} duration={2} />+
                     </div>
                     <div className="text-sm md:text-base">
                       Countries Worked In (Manila, Kuwait, Dubai, Canada)
@@ -107,10 +107,10 @@ function Page() {
 
                 {/* Fourth section */}
                 <div className="flex md:items-center lg:items-start px-4 sm:px-8 lg:px-16">
-                  <div className="w-2 h-10 bg-yellow-500 mr-4"></div>
+                  <div className="w-3 h-12 bg-yellow-500 mr-4"></div>
                   <div className="flex flex-col">
-                    <div className="text-3xl md:text-4xl font-bold mb-2">
-                      <CountUp end={500} duration={2} />%
+                    <div className="text-3xl md:text-5xl font-bold mb-2">
+                      <CountUp end={100} duration={2} />%
                     </div>
                     <div className="text-sm md:text-base">
                       Customer Satisfaction Guaranteed
@@ -155,11 +155,11 @@ function Page() {
                 />
                 <label
                   htmlFor={`custom-checkbox-${index}`}
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-white border-2 border-red-500 cursor-not-allowed relative flex-shrink-0"
+                  className="w-14 h-14 flex items-center justify-center rounded-full bg-white border-2 border-red-500 cursor-not-allowed relative flex-shrink-0"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-8 h-8 text-red-500"
+                    className="w-20 h-20 text-red-500"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -172,17 +172,23 @@ function Page() {
                     />
                   </svg>
                 </label>
-                <span className="text-base sm:text-sm md:text-lg lg:text-xl text-white">
+                <span className="text-base sm:text-sm md:text-lg lg:text-3xl text-white">
                   {text}
                 </span>
               </div>
             ))}
           </div>
+          <div className="mx-auto lg:mt-4">
+            <p className="  text-center text-sm md:text-xl text-white">
+              If your appliance is from a different brand, don’t hesitate to
+              contact us <br /> to see if we can assist with your repair needs.
+            </p>
+          </div>
         </div>
 
-        <div className="h-auto py-8 roboto-font-nav lg:mt-10 ">
+        <div className="h-auto py-5 roboto-font-nav lg:mt-10 ">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-8">
+            <div className="text-center ">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-black">
                 SERVICES
               </h2>
@@ -191,7 +197,7 @@ function Page() {
                 <span className="blue-text"> Appliance Repairs </span> You{" "}
                 <span className="red-text">Can Trust</span>
               </p>
-              <p className=" max-w-3xl mx-auto text-sm md:md text-gray-700">
+              <p className=" max-w-3xl mx-auto text-sm md:text-base font-extralight text-gray-400">
                 We understand how essential your home appliances are to your
                 daily life. That’s why we’re committed to providing fast,
                 reliable, and expert repair services for a wide range of
@@ -204,12 +210,8 @@ function Page() {
         <div class="p-4 mb-2">
           <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 custom-horizontal-gap gap-6 sm:grid-cols-2 md:grid-cols-3 justify-items-center">
-              <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-zinc-800 dark:border-gray-700">
-                <img
-                  class="w-full rounded-t-lg"
-                  src="/washingMachines.png"
-                  alt=""
-                />
+              <div class="max-w-xs bg-white border border-gray-200 shadow-2xl dark:bg-zinc-800 dark:border-gray-700">
+                <img class="w-full " src="/washingMachines.png" alt="" />
 
                 <div class="p-5 text-center">
                   <a href="#">
@@ -224,12 +226,8 @@ function Page() {
                   </p>
                 </div>
               </div>
-              <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-zinc-800 dark:border-gray-700">
-                <img
-                  class="w-full rounded-t-lg"
-                  src="/refrigerators.png"
-                  alt=""
-                />
+              <div class="max-w-xs bg-white border border-gray-200 shadow-2xl  dark:bg-zinc-800 dark:border-gray-700">
+                <img class="w-full " src="/refrigerators.png" alt="" />
 
                 <div class="p-5 text-center">
                   <a href="#">
@@ -244,8 +242,8 @@ function Page() {
                   </p>
                 </div>
               </div>
-              <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-zinc-800 dark:border-gray-700">
-                <img class="w-full rounded-t-lg" src="/dryers.png" alt="" />
+              <div class="max-w-xs bg-white border border-gray-200 shadow-2xl dark:bg-zinc-800 dark:border-gray-700">
+                <img class="w-full " src="/dryers.png" alt="" />
 
                 <div class="p-5 text-center">
                   <a href="#">
@@ -259,8 +257,8 @@ function Page() {
                   </p>
                 </div>
               </div>
-              <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-zinc-800 dark:border-gray-700">
-                <img class="w-full rounded-t-lg" src="/ovens.png" alt="" />
+              <div class="max-w-xs bg-white border border-gray-200 shadow-2xl dark:bg-zinc-800 dark:border-gray-700">
+                <img class="w-full " src="/ovens.png" alt="" />
 
                 <div class="p-5 text-center">
                   <a href="#">
@@ -274,8 +272,8 @@ function Page() {
                   </p>
                 </div>
               </div>
-              <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-zinc-800 dark:border-gray-700">
-                <img class="w-full rounded-t-lg" src="/stoves.png" alt="" />
+              <div class="max-w-xs bg-white border border-gray-200 shadow-2xl dark:bg-zinc-800 dark:border-gray-700">
+                <img class="w-full " src="/stoves.png" alt="" />
 
                 <div class="p-5 text-center">
                   <a href="#">
@@ -290,12 +288,8 @@ function Page() {
                   </p>
                 </div>
               </div>
-              <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-zinc-800 dark:border-gray-700">
-                <img
-                  class="w-full rounded-t-lg"
-                  src="/dishwashers.png"
-                  alt=""
-                />
+              <div class="max-w-xs bg-white border border-gray-200 shadow-2xl dark:bg-zinc-800 dark:border-gray-700">
+                <img class="w-full " src="/dishwashers.png" alt="" />
 
                 <div class="p-5 text-center">
                   <a href="#">
@@ -315,11 +309,11 @@ function Page() {
 
         <div className="h-auto py-8 roboto-font-nav">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-8">
+            <div className="text-center mb-2">
               <p className="text-sm md:text-2xl text-black font-semibold mb-2">
                 Book Your <span className="blue-text">Repair</span> Today
               </p>
-              <div className="flex justify-center  md:flex">
+              <div className="flex justify-center  md:flex lg:mt-5">
                 <Link
                   href="/quote"
                   className="secondary-button hover:bg-white hover:red-text hover:scale-x-105 "
@@ -333,7 +327,7 @@ function Page() {
         <div className="h-auto py-8 roboto-font-nav">
           <div className="container mx-auto px-4">
             <div className="text-center mb-8">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-black">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold  text-black">
                 <span className="secondary-blue-text">
                   Signs You Need a <span className="red-text">Repair</span>
                 </span>
@@ -341,7 +335,7 @@ function Page() {
             </div>
           </div>
         </div>
-        <div class="p-4 mb-2">
+        <div class="p-4 mb-16">
           <div class="container mx-auto">
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
               <div class="flex flex-col items-center">

@@ -47,16 +47,13 @@ function Page() {
     setLoading(true); // Start loading
 
     try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/quotation`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch("/api/quotation", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
       if (response.ok) {
         // Show success message
@@ -112,11 +109,16 @@ function Page() {
                 Need a Repair? Get a <span className="blue-text">Free</span>
                 <span className="red-text"> Estimate</span> Today!
               </h1>
+              <p className="text-center mt-5">
+                Your satisfaction is our priority. Get your appliances running
+                smoothly again—reach out today for a free estimate!
+              </p>
             </div>
 
             {/* Pink color box form */}
             <div className="quote-form p-6 rounded-lg shadow-md">
               <form onSubmit={handleSubmit}>
+                {/* Input fields for full name, email, and phone number */}
                 <div className="mb-4">
                   <label
                     htmlFor="fullName"
@@ -172,6 +174,7 @@ function Page() {
                   </div>
                 </div>
 
+                {/* Services selection */}
                 <div className="mb-4">
                   <fieldset>
                     <legend className="block text-md font-bold text-black ">
@@ -210,6 +213,7 @@ function Page() {
                   </fieldset>
                 </div>
 
+                {/* Additional details */}
                 <div className="mb-4">
                   <label
                     htmlFor="details"
@@ -234,10 +238,12 @@ function Page() {
                   </p>
                 </div>
 
+                {/* Submit button */}
                 <div className="mb-4 flex justify-center">
                   <button
                     type="submit"
-                    className="submit-button w-40 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                    className="submit-button w-40 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 flex items-center justify-center"
+                    disabled={loading} // Disable button while loading
                   >
                     {loading ? (
                       <span className="loader"></span> // Loading animation
@@ -249,9 +255,14 @@ function Page() {
               </form>
             </div>
           </div>
+          <p className="text-center mt-5">
+            Your satisfaction is our priority. Get your appliances running
+            smoothly again—reach out today for a free estimate!
+          </p>
         </div>
       </main>
 
+      {/* Message notification */}
       {message.show && (
         <div
           className={`fixed top-4 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded shadow-lg text-white ${
@@ -261,7 +272,6 @@ function Page() {
           {message.text}
         </div>
       )}
-
       <Footer />
     </div>
   );

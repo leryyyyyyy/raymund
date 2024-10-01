@@ -28,13 +28,13 @@ const Blog1 = () => {
           <div className="flex-none md:w-1/2 flex justify-center">
             <img
               src="/blog3-img.svg"
-              className="w-full h-auto max-w-md"
+              className="w-full h-auto max-w-lg"
               alt="Blog 1"
             />
           </div>
           <div className="flex-1 mt-10 md:mt-0 md:ml-10">
             <p className="text-2xl blue-text roboto-font-nav">Introduction</p>
-            <p className="roboto-font-nav mt-5 text-lg md:text-xl leading-8">
+            <p className="roboto-font-nav mt-5 text-lg md:text-xl leading-8 text-justify">
               Regular appliance maintenance is more than just a routine
               task—it’s a wise investment that can lead to significant cost
               savings over time. Understanding the benefits can help you see the
@@ -43,13 +43,13 @@ const Blog1 = () => {
           </div>
         </div>
 
-        <div className="mt-20 flex flex-col justify-center">
+        <div className="mt-20 flex flex-col justify-center md:ms-5">
           <p className="text-xl font-bold roboto-font-nav">
             Cost of Preventative Maintenance vs. Emergency Repairs
           </p>
           <ul
             style={{ listStyleType: "disc", paddingLeft: "20px" }}
-            className="space-y-4 roboto-font-nav mt-5 text-base md:text-lg"
+            className="space-y-4 roboto-font-nav mt-5 text-base md:text-lg ms-8 text-justify"
           >
             <li>
               Routine Maintenance: Regular inspections and minor repairs can
@@ -65,13 +65,13 @@ const Blog1 = () => {
             </li>
           </ul>
         </div>
-        <div className="mt-14 flex flex-col justify-center">
+        <div className="mt-14 flex flex-col justify-center md:ms-5">
           <p className="text-xl font-bold roboto-font-nav">
             Efficiency and Energy Savings
           </p>
           <ul
             style={{ listStyleType: "disc", paddingLeft: "20px" }}
-            className="space-y-4 roboto-font-nav mt-5 text-base md:text-lg"
+            className="space-y-4 roboto-font-nav mt-5 text-base md:text-lg ms-8 text-justify"
           >
             <li>
               Optimized Performance: Well-maintained appliances operate more
@@ -88,11 +88,11 @@ const Blog1 = () => {
             </li>
           </ul>
         </div>
-        <div className="mt-14 flex flex-col justify-center">
+        <div className="mt-14 flex flex-col justify-center md:ms-5">
           <p className="text-xl font-bold roboto-font-nav">Enhanced Safety</p>
           <ul
             style={{ listStyleType: "disc", paddingLeft: "20px" }}
-            className="space-y-4 roboto-font-nav mt-5 text-base md:text-lg"
+            className="space-y-4 roboto-font-nav mt-5 text-base md:text-lg ms-8 text-justify"
           >
             <li>
               Routine maintenance can help identify safety hazards such as gas
@@ -108,9 +108,9 @@ const Blog1 = () => {
         </div>
 
         {/* Conclusion */}
-        <div className="my-10">
-          <p className="text-xl font-bold roboto-font-nav">Conclusion:</p>
-          <p className="roboto-font-nav text-base md:text-lg">
+        <div className="my-10 ms-5">
+          <p className="text-xl font-bold roboto-font-nav ms-8 ">Conclusion:</p>
+          <p className="roboto-font-nav text-base md:text-lg ms-8 text-justify">
             Investing in regular maintenance not only helps avoid costly repairs
             but also improves appliance efficiency and safety. Schedule a
             maintenance visit today to ensure your appliances remain in

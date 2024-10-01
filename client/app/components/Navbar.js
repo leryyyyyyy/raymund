@@ -25,7 +25,7 @@ const Navbar = () => {
 
           {/* Links */}
           <div className="space-x-4 text-xs sm:text-xs">
-            <Link href="/reviews" className="hover:underline">
+            <Link href="/#ourReviews" className="hover:underline">
               REVIEWS
             </Link>
             <Link href="/blogs" className="hover:underline">
@@ -38,7 +38,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <nav className="bg-white shadow-lg roboto-font-nav text-lg">
+      <nav className="bg-white  roboto-font-nav text-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
@@ -177,6 +177,13 @@ const Navbar = () => {
               className="text-black  block px-3 py-2 rounded-md text-base font-medium group"
             >
               Pricing
+              <span className="block h-[2px] bg-gray-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+            </Link>
+            <Link
+              href="/pricing"
+              className="text-black  block px-3 py-2 rounded-md text-base font-medium group"
+            >
+              Faqs
               <span className="block h-[2px] bg-gray-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </Link>
             <Link href="/quote" className="primary-button">

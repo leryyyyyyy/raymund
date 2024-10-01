@@ -4,6 +4,8 @@ import { Roboto } from "@next/font/google";
 import { Raleway } from "next/font/google";
 import { Lato } from "next/font/google";
 import { Inter } from "next/font/google";
+import ChatbotCircle from "./components/circleSide";
+import ClientLoading from "./components/ClientLoading";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -45,12 +47,23 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&family=Raleway:wght@400;600&display=swap"
+          rel="stylesheet"
+        />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0"
         ></meta>
       </head>
-      <body>{children}</body>
+      <body>
+        <ClientLoading>{children}</ClientLoading>
+        <ChatbotCircle />
+      </body>
     </html>
   );
 }

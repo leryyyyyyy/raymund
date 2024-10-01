@@ -16,6 +16,8 @@ module.exports = {
       fontFamily: {
         headings: "Roboto",
         body: "Roboto",
+        raleway: "Raleway",
+        raleway: ["Raleway", "sans-serif"],
       },
       screens: {
         xs: "360px",
@@ -79,10 +81,11 @@ module.exports = {
           fontFamily: "Roboto",
           fontWeight: "600",
           fontSize: "18px",
-          backgroundColor: "#F81818", //! changed color
+          backgroundColor: "#EC3C3C", //! changed color
           color: "#fff ", //! changed color
           borderRadius: "8px",
           padding: "6px 18px",
+          minWidth: "150px",
           transition: "all 0.3s ease-in-out",
         },
         ".primary-color": {
@@ -133,6 +136,12 @@ module.exports = {
         },
         ".text-indent": {
           textIndent: "4rem",
+        },
+        ".no-decoration": {
+          textDecoration: "none",
+        },
+        ".bold-bolder": {
+          fontWeight: "900",
         },
       });
     },
