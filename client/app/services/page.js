@@ -211,7 +211,7 @@ function Page() {
           <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 custom-horizontal-gap gap-6 sm:grid-cols-2 md:grid-cols-3 justify-items-center">
               <div class="max-w-xs bg-white border border-gray-200 shadow-2xl dark:bg-zinc-800 dark:border-gray-700">
-                <img class="w-full " src="washingMachines.png" alt="" />
+                <img class="w-full " src="washingmachines.png" alt="" />
 
                 <div class="p-5 text-center">
                   <a href="#">
