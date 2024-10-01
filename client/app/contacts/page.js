@@ -88,11 +88,8 @@ const Page = () => {
           </div>
           <div className="flex justify-center items-center py-10">
             <div
-              className="relative bg-gray-400 md:bg-cover md:bg-center md:bg-no-repeat rounded-lg w-full md:w-3/4 lg:w-2/3 flex flex-col md:flex-row"
-              style={{
-                backgroundImage:
-                  window.innerWidth >= 768 ? "url('washrepair.jpg')" : "none",
-              }}
+              className="relative bg-cover bg-center bg-no-repeat rounded-lg w-full md:w-3/4 lg:w-2/3 flex flex-col md:flex-row"
+              style={{ backgroundImage: "url('washrepair.jpg')" }}
             >
               <div className="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
 
@@ -218,7 +215,7 @@ const Page = () => {
                     </button>
                   </div>
 
-                  <p className="text-gray-300 text-sm text-center mt-2  ">
+                  <p className="text-gray-300 text-sm text-center mt-2">
                     We respect your privacy. The information provided is used
                     only to respond to your inquiry and arrange your service. We
                     do not share your data with third parties.
