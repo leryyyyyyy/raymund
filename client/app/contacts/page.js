@@ -88,8 +88,11 @@ const Page = () => {
           </div>
           <div className="flex justify-center items-center py-10">
             <div
-              className="relative bg-cover bg-center bg-no-repeat rounded-lg w-full md:w-3/4 lg:w-2/3 flex flex-col md:flex-row"
-              style={{ backgroundImage: "url('washrepair.jpg')" }}
+              className="relative bg-gray-400 md:bg-cover md:bg-center md:bg-no-repeat rounded-lg w-full md:w-3/4 lg:w-2/3 flex flex-col md:flex-row"
+              style={{
+                backgroundImage:
+                  window.innerWidth >= 768 ? "url('washrepair.jpg')" : "none",
+              }}
             >
               <div className="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
 
