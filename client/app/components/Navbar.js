@@ -187,7 +187,7 @@ const Navbar = () => {
               <span className="block h-[2px] bg-gray-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </Link>
             <Link href="/quote" className="primary-button">
-              GET A FREE QOUTE
+              GET A FREE QUOTE
             </Link>
           </div>
         </div>
