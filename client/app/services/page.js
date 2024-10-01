@@ -21,14 +21,14 @@ function Page() {
     <div className="flex flex-col min-h-screen roboto-font-nav">
       <Navbar />
       <main className="flex-grow">
-        <section className="relative flex flex-col lg:flex-row lg:h-screen sm:h-[70vh] md:h-[100vh] max-w-7xl mx-auto lg:max-w-none xl:pt-10">
+        <section className="relative flex flex-col lg:flex-row lg:h-screen sm:h-[70vh] md:h-[90vh] max-w-7xl mx-auto lg:max-w-none xl:pt-10">
           <div
             className="absolute inset-0 bg-cover bg-right bg-no-repeat sm:blur-none blur-sm hero-image-default"
             style={{
               zIndex: -1,
             }}
           ></div>
-          <div className="relative lg:top-12 text-center lg:left-14 sm:text-left lg:text-left p-6 lg:p-0">
+          <div className="relative xl:top-36 lg:top-24 md:top-10 sm:top-5 text-center  lg:left-28 md:left-14 sm:left-8 sm:text-left lg:text-left p-2 lg:p-0">
             <div className="md:space-y-2">
               <h1 className="max-w-2xl mb-4 sm:mb-6 md:mb-8 lg:font-extrabold tracking-tight text-3xl sm:text-3xl md:text-6xl xl:text-8xl dark:text-white whitespace-nowrap">
                 <span className="inline-block text-black px-4 py-3">
@@ -40,16 +40,16 @@ function Page() {
               </h1>
             </div>
 
-            <div className="mt-10 ">
+            <div className="mt-10  ">
               <Link
                 href="/quote"
-                className="md:mr-5 inline-flex mb-5 mr-2  md:mb-0  items-center justify-center px-4 py-2 text-sm sm:text-base md:text-lg font-semibold primary-button hover:bg-yellow-100 hover:scale-x-105"
+                className="md:mr-5 inline-flex mb-5 mr-0 sm:mr-2   md:mb-0  items-center justify-center px-4 py-2 text-sm sm:text-base md:text-lg font-semibold primary-button hover:bg-yellow-100 hover:scale-x-105"
               >
                 GET A FREE QUOTE
               </Link>
               <Link
                 href="/about-us"
-                className="inline-flex items-center  justify-center px-4 py-2 text-sm sm:text-base md:text-lg font-semibold primary-button hover:bg-yellow-100 hover:scale-x-105"
+                className=" secondary-button inline-flex items-center  justify-center [#FF3131] px-4 py-2 text-sm sm:text-base md:text-lg font-semibold  hover:bg-yellow-100 hover:scale-x-105"
               >
                 GET TO KNOW US
               </Link>

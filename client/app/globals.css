@@ -35,7 +35,7 @@ body {
   background-image: url("/servicesHeroSm.png");
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
   .hero-image-default {
     background-image: url("/servicesHeroSm.png");
   }
