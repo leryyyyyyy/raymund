@@ -23,6 +23,17 @@ const ChatbotCircle = () => {
       {isOpen && (
         <div className="absolute bottom-20 right-0 flex flex-col items-center space-y-2">
           <a
+            href="https://www.facebook.com/raymundblonesappliancerepair?mibextid=ZbWKwL"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="facebook.svg"
+              alt="Social Media Logo"
+              className="w-16 h-16"
+            />
+          </a>
+          {/* <a
             href="https://www.yoursocialmedia.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -32,18 +43,7 @@ const ChatbotCircle = () => {
               alt="Social Media Logo"
               className="w-16 h-16"
             />
-          </a>
-          <a
-            href="https://www.yoursocialmedia.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/weAccept/discover.jpg"
-              alt="Social Media Logo"
-              className="w-16 h-16"
-            />
-          </a>
+          </a> */}
         </div>
       )}
     </div>

@@ -15,16 +15,16 @@ const Navbar = () => {
   return (
     <>
       {/* Black Bar Section */}
-      <div className="bg-black text-white roboto-font-nav text-sm md:text-base hidden md:block">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-2">
+      <div className="bg-black text-white roboto-font-nav text-sm md:text-base">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center py-2">
           {/* Contact Icon */}
-          <div className="flex items-center space-x-2 text-xs sm:text-sm">
+          <div className="flex items-center space-x-2 mb-2 sm:mb-0 text-xs sm:text-sm">
             <i className="fas fa-phone-alt w-5 h-5 text-white"></i>
-            <span className="font-medium"> 778-922-8628 or 778-922-7812</span>
+            <span className="font-medium">778-922-8628 or 778-922-7812</span>
           </div>
 
           {/* Links */}
-          <div className="space-x-4 text-xs sm:text-xs">
+          <div className="space-x-4 text-xs sm:text-sm flex justify-center sm:justify-end">
             <Link href="/#ourReviews" className="hover:underline">
               REVIEWS
             </Link>
@@ -39,7 +39,7 @@ const Navbar = () => {
       </div>
 
       <nav className="bg-white  roboto-font-nav text-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-0 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               {/* Logo */}
@@ -48,7 +48,7 @@ const Navbar = () => {
               </a> */}
               <img src="/Raymond 1.png" className="pb-2" alt="Logo"></img>
             </div>
-            <div className="hidden md:flex space-x-4">
+            <div className="hidden md:flex lg:space-x-4">
               <Link
                 href="/"
                 className="text-black px-3 py-2 rounded-md group 
@@ -180,13 +180,13 @@ const Navbar = () => {
               <span className="block h-[2px] bg-gray-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </Link>
             <Link
-              href="/pricing"
+              href="/faq"
               className="text-black  block px-3 py-2 rounded-md text-base font-medium group"
             >
               Faqs
               <span className="block h-[2px] bg-gray-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </Link>
-            <Link href="/quote" className="primary-button">
+            <Link href="/quote" className="primary-button ">
               GET A FREE QUOTE
             </Link>
           </div>

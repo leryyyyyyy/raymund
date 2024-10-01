@@ -21,7 +21,7 @@ function Page() {
     <div className="flex flex-col min-h-screen roboto-font-nav">
       <Navbar />
       <main className="flex-grow">
-        <section className="relative flex flex-col lg:flex-row lg:h-screen sm:h-[50vh] md:h-[60vh] max-w-7xl mx-auto lg:max-w-none xl:pt-10">
+        <section className="relative flex flex-col lg:flex-row lg:h-screen sm:h-[70vh] md:h-[100vh] max-w-7xl mx-auto lg:max-w-none xl:pt-10">
           <div
             className="absolute inset-0 bg-cover bg-right bg-no-repeat sm:blur-none blur-sm hero-image-default"
             style={{
@@ -39,20 +39,7 @@ function Page() {
                 </span>
               </h1>
             </div>
-            {/* <div className="flex flex-wrap gap-4 mt-4">
-              <a
-                href="/quote"
-                className="inline-flex items-center justify-center px-4 py-2 text-sm sm:text-base md:text-lg font-semibold primary-button"
-              >
-                GET A FREE QUOTE
-              </a>
-              <a
-                href="/about-us"
-                className=" secondary-button inline-flex [#FF3131] items-center justify-center px-4 py-2 text-sm sm:text-base md:text-lg font-semibold "
-              >
-                GET TO KNOW US
-              </a>
-            </div> */}
+
             <div className="mt-10 ">
               <Link
                 href="/quote"
@@ -108,15 +95,15 @@ function Page() {
         <div className="h-auto py-8 secondary-color text-white">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
                 {/* First section */}
-                <div className="flex md:items-center lg:items-start px-4 sm:px-8 lg:px-16">
+                <div className="flex md:items-center lg:items-start px-4 sm:px-8 md:px-2 xl:px-16">
                   <div className="w-2 h-12 bg-yellow-500 mr-4"></div>
                   <div className="flex flex-col">
                     <div className="text-3xl md:text-5xl font-bold mb-2">
                       <CountUp end={5} decimals={1} duration={2} />
                     </div>
-                    <div className="text-sm md:text-base">
+                    <div className="text-sm sm:text-md lg:text-base">
                       rated from <span className="text-[#0095FF]">g</span>
                       <span className="red-text">o</span>
                       <span className="yellow-text">o</span>
@@ -128,39 +115,39 @@ function Page() {
                 </div>
 
                 {/* Second section */}
-                <div className="flex md:items-center lg:items-start px-4 sm:px-8 lg:px-16">
+                <div className="flex md:items-center lg:items-start px-4 sm:px-8 md:px-2 xl:px-16">
                   <div className="w-3 h-12 bg-yellow-500 mr-4"></div>
                   <div className="flex flex-col">
                     <div className="text-3xl md:text-5xl font-bold mb-2">
                       <CountUp end={10} duration={2} />+
                     </div>
-                    <div className="text-sm md:text-base">
+                    <div className="text-sm sm:text-md lg:text-base">
                       Years of Experience in Appliance Repair
                     </div>
                   </div>
                 </div>
 
                 {/* Third section */}
-                <div className="flex md:items-center lg:items-start px-4 sm:px-8 lg:px-16">
+                <div className="flex md:items-center lg:items-start px-4 sm:px-8 md:px-2 xl:px-16">
                   <div className="w-4 h-12 bg-yellow-500 mr-4 "></div>
                   <div className="flex flex-col">
                     <div className="text-3xl md:text-5xl font-bold mb-2">
                       <CountUp end={3} duration={2} />+
                     </div>
-                    <div className="text-sm md:text-base">
+                    <div className="text-sm sm:text-md lg:text-base">
                       Countries Worked In (Manila, Kuwait, Dubai, Canada)
                     </div>
                   </div>
                 </div>
 
                 {/* Fourth section */}
-                <div className="flex md:items-center lg:items-start px-4 sm:px-8 lg:px-16">
+                <div className="flex md:items-center lg:items-start px-4 sm:px-8 md:px-2 xl:px-16">
                   <div className="w-3 h-12 bg-yellow-500 mr-4"></div>
                   <div className="flex flex-col">
                     <div className="text-3xl md:text-5xl font-bold mb-2">
                       <CountUp end={100} duration={2} />%
                     </div>
-                    <div className="text-sm md:text-base">
+                    <div className="text-sm sm:text-md lg:text-base">
                       Customer Satisfaction Guaranteed
                     </div>
                   </div>
@@ -187,7 +174,7 @@ function Page() {
           </div>
         </div>
 
-        <div className="checkBoxSection h-auto max-w-7xl mx-2 md:mx-auto py-8 px-4 sm:px-6 lg:px-8 tertiary-color">
+        <div className="checkBoxSection h-auto max-w-5xl xl:max-w-7xl mx-2 md:mx-auto py-8 px-4 sm:px-6 lg:px-8 tertiary-color">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4">
             {checkboxTexts.map((text, index) => (
               <div
@@ -203,11 +190,11 @@ function Page() {
                 />
                 <label
                   htmlFor={`custom-checkbox-${index}`}
-                  className="w-14 h-14 flex items-center justify-center rounded-full bg-white border-2 border-red-500 cursor-not-allowed relative flex-shrink-0"
+                  className="w-10 h-10 xl:w-14 xl:h-14 flex items-center justify-center rounded-full bg-white border-2 border-red-500 cursor-not-allowed relative flex-shrink-0"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-20 h-20 text-red-500"
+                    className="xl:w-20 xl:h-20 md:h-10 text-red-500"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -220,7 +207,7 @@ function Page() {
                     />
                   </svg>
                 </label>
-                <span className="text-base sm:text-sm md:text-lg lg:text-3xl text-white">
+                <span className="text-base sm:text-sm md:text-lg xl:text-2xl text-white">
                   {text}
                 </span>
               </div>
@@ -258,7 +245,7 @@ function Page() {
         <div class="p-4 mb-2">
           <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 custom-horizontal-gap gap-6 sm:grid-cols-2 md:grid-cols-3 justify-items-center">
-              <div class="max-w-xs bg-white border border-gray-200 shadow-2xl dark:bg-zinc-800 dark:border-gray-700">
+              <div class="max-w-xs  border  shadow-2xl bg-zinc-800 border-gray-700">
                 <img class="w-full " src="washingmachines.png" alt="" />
 
                 <div class="p-5 text-center">
@@ -274,7 +261,7 @@ function Page() {
                   </p>
                 </div>
               </div>
-              <div class="max-w-xs bg-white border border-gray-200 shadow-2xl  dark:bg-zinc-800 dark:border-gray-700">
+              <div class="max-w-xs  border  shadow-2xl bg-zinc-800 border-gray-700">
                 <img
                   class="w-full "
                   src="Refrigerators.png"
@@ -294,7 +281,7 @@ function Page() {
                   </p>
                 </div>
               </div>
-              <div class="max-w-xs bg-white border border-gray-200 shadow-2xl dark:bg-zinc-800 dark:border-gray-700">
+              <div class="max-w-xs  border  shadow-2xl bg-zinc-800 border-gray-700">
                 <img class="w-full " src="/dryers.png" alt="" />
 
                 <div class="p-5 text-center">
@@ -309,7 +296,7 @@ function Page() {
                   </p>
                 </div>
               </div>
-              <div class="max-w-xs bg-white border border-gray-200 shadow-2xl dark:bg-zinc-800 dark:border-gray-700">
+              <div class="max-w-xs  border  shadow-2xl bg-zinc-800 border-gray-700">
                 <img class="w-full " src="/ovens.png" alt="" />
 
                 <div class="p-5 text-center">
@@ -324,7 +311,7 @@ function Page() {
                   </p>
                 </div>
               </div>
-              <div class="max-w-xs bg-white border border-gray-200 shadow-2xl dark:bg-zinc-800 dark:border-gray-700">
+              <div class="max-w-xs  border  shadow-2xl bg-zinc-800 border-gray-700">
                 <img class="w-full " src="/stoves.png" alt="" />
 
                 <div class="p-5 text-center">
@@ -340,7 +327,7 @@ function Page() {
                   </p>
                 </div>
               </div>
-              <div class="max-w-xs bg-white border border-gray-200 shadow-2xl dark:bg-zinc-800 dark:border-gray-700">
+              <div class="max-w-xs  border  shadow-2xl bg-zinc-800 border-gray-700">
                 <img class="w-full " src="/dishwashers.png" alt="" />
 
                 <div class="p-5 text-center">

@@ -26,12 +26,12 @@ const FrequentlyAsked = () => {
         </div>
       </div>
 
-      <div className="mt-10 px-5 sm:p-6 lg:p-0">
-        <div className="w-full max-w-7xl mx-auto space-y-4">
+      <div className="mt-10 px-5 sm:p-6 lg:p-0 ">
+        <div className="w-full max-w-7xl mx-auto space-y-4 ">
           {/* Accordion Item 1 */}
-          <div className="secondary-color rounded-3xl">
+          <div className="secondary-color rounded-3xl mx-0 md:mx-10">
             <button
-              className="flex items-center w-full text-left px-4 py-3 md:pl-16 text-md lg:text-2xl roboto-font-nav text-slate-50 secondary-color focus:outline-none rounded-3xl"
+              className="flex items-center w-full  text-left px-4 py-3 md:pl-16 text-md lg:text-2xl roboto-font-nav text-slate-50 secondary-color focus:outline-none rounded-3xl"
               onClick={() => toggleAccordion(1)}
             >
               <img src="/Check Mark.svg" className="w-9 me-10"></img>
@@ -49,7 +49,7 @@ const FrequentlyAsked = () => {
           </div>
 
           {/* Accordion Item 2 */}
-          <div className="secondary-color rounded-3xl">
+          <div className="secondary-color rounded-3xl mx-0 md:mx-10">
             <button
               className="flex items-center w-full text-left px-4 py-3 md:pl-16 text-md lg:text-2xl roboto-font-nav text-slate-50 secondary-color focus:outline-none rounded-3xl"
               onClick={() => toggleAccordion(2)}
@@ -72,7 +72,7 @@ const FrequentlyAsked = () => {
           </div>
 
           {/* Accordion Item 3 */}
-          <div className="secondary-color rounded-3xl">
+          <div className="secondary-color rounded-3xl mx-0 md:mx-10">
             <button
               className="flex items-center w-full text-left px-4 py-3 md:pl-16 text-md lg:text-2xl roboto-font-nav text-slate-50 secondary-color focus:outline-none rounded-3xl"
               onClick={() => toggleAccordion(3)}
@@ -93,7 +93,7 @@ const FrequentlyAsked = () => {
           </div>
 
           {/* Accordion Item 4 */}
-          <div className="secondary-color rounded-3xl">
+          <div className="secondary-color rounded-3xl mx-0 md:mx-10">
             <button
               className="flex items-center w-full text-left px-4 py-3 md:pl-16 text-md lg:text-2xl roboto-font-nav text-slate-50 secondary-color focus:outline-none rounded-3xl"
               onClick={() => toggleAccordion(4)}
@@ -114,7 +114,7 @@ const FrequentlyAsked = () => {
           </div>
 
           {/* Accordion Item 5 */}
-          <div className="secondary-color rounded-3xl">
+          <div className="secondary-color rounded-3xl mx-0 md:mx-10">
             <button
               className="flex items-center w-full text-left px-4 py-3 md:pl-16 text-md lg:text-2xl roboto-font-nav text-slate-50 secondary-color focus:outline-none rounded-3xl"
               onClick={() => toggleAccordion(5)}
@@ -135,7 +135,7 @@ const FrequentlyAsked = () => {
           </div>
 
           {/* Accordion Item 6 */}
-          <div className="secondary-color rounded-3xl">
+          <div className="secondary-color rounded-3xl mx-0 md:mx-10">
             <button
               className="flex items-center w-full text-left px-4 py-3 md:pl-16 text-md lg:text-2xl roboto-font-nav text-slate-50 secondary-color focus:outline-none rounded-3xl"
               onClick={() => toggleAccordion(6)}
@@ -192,10 +192,10 @@ const FrequentlyAsked = () => {
             </p>
           </div>
           <div className="bg-[#C8DBFF] p-5 lg:py-10 lg:px-14 rounded-[70px] sm:mx-10 md:mx-5 lg:mx-16 my-8 md:mb-24 ">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-2 lg:gap-24 text-black">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-2 xl:gap-24 text-black">
               <div className="flex flex-col max-w-sm mx-auto secondary-color-darker  rounded-[45px] p-6">
                 <div className="flex items-center mb-4">
-                  <span className="text-yellow-400 text-2xl sm:text-sm md:text-2xl lg:text-4xl">
+                  <span className="text-yellow-400 text-2xl sm:text-sm md:text-2xl lg:text-2xl xl:text-4xl">
                     ★ ★ ★ ★ ★
                   </span>
                   <span className="text-white text-sm font-bold ml-2">
@@ -221,7 +221,7 @@ const FrequentlyAsked = () => {
 
               <div className="flex flex-col max-w-sm mx-auto secondary-color-darker  rounded-[45px] p-6">
                 <div className="flex items-center mb-4">
-                  <span className="text-yellow-400 text-2xl sm:text-sm md:text-2xl lg:text-4xl">
+                  <span className="text-yellow-400 text-2xl sm:text-sm md:text-2xl lg:text-2xl xl:text-4xl">
                     ★ ★ ★ ★ ★
                   </span>
                   <span className="text-white text-sm font-bold ml-2">
@@ -247,7 +247,7 @@ const FrequentlyAsked = () => {
 
               <div className="flex flex-col max-w-sm mx-auto secondary-color-darker  rounded-[45px] p-6">
                 <div className="flex items-center mb-4">
-                  <span className="text-yellow-400 text-2xl sm:text-sm md:text-2xl lg:text-4xl">
+                  <span className="text-yellow-400 text-2xl sm:text-sm md:text-2xl lg:text-2xl xl:text-4xl">
                     ★ ★ ★ ★ ★
                   </span>
                   <span className="text-white text-sm font-bold ml-2">

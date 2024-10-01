@@ -89,8 +89,8 @@ function Page() {
             </div>
           </div>
 
-          <div className="h-auto mx-auto md:mx-8 pb-2 roboto-font-nav bg-[#FA1111] md:bg-[url('/Intersect.png')] md:bg-transparent bg-cover bg-center mt-3">
-            <div className="relative w-full flex flex-col md:flex-row items-center justify-center overflow-hidden">
+          <div className="h-auto mx-auto  pb-2 roboto-font-nav bg-[#FA1111] md:bg-[url('/Intersect.png')] md:bg-transparent bg-cover bg-center mt-3">
+            <div className="relative w-full flex flex-col md:flex-row items-center justify-center overflow-hidden md:px-8">
               <div className="flex flex-col md:flex-row w-full max-w-7xl">
                 {/* Left Box */}
                 <div className="flex-1 bg-white p-6 shadow-xl mt-2 h-auto md:h-[80rem] lg:h-[55rem] xl:h-[45rem] md:mt-36 text-center border-2 max-w-xs md:max-w-md mx-auto order-1 md:order-1">
@@ -235,7 +235,7 @@ function Page() {
             smoothly and avoid costly repairs!
           </p>
 
-          <div className="max-w-7xl mx-10 md:mx-10 lg:mx-auto  ">
+          <div className="max-w-5xl xl:max-w-7xl mx-10 md:mx-10 lg:mx-auto  ">
             <p className="my-10 text-sm sm:text-base md:text-lg">
               Our diagnostic fee is a simple, upfront charge that covers both
               travel and a comprehensive assessment of your appliance. The best

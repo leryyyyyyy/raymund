@@ -77,14 +77,14 @@ const Footer = () => {
             <div className="mt-10 text-xl font-semibold">Follow Us</div>
             <div className="flex flex-col space-y-2">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/raymundblonesappliancerepair?mibextid=ZbWKwL"
                 className="hover:text-blue-500 underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Facebook
               </a>
-              <a
+              {/* <a
                 href="https://twitter.com"
                 className="hover:text-blue-500"
                 target="_blank"
@@ -107,7 +107,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
               >
                 LinkedIn
-              </a>
+              </a> */}
             </div>
             {successMessage && (
               <p className="green-text mt-2">{successMessage}</p>
