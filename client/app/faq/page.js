@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Link from "next/link";
 
 const FrequentlyAsked = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -173,9 +174,12 @@ const FrequentlyAsked = () => {
           </div>
         </div>
         <div className="flex justify-center">
-          <button className="primary-button font-bold custom-box-shadow my-7 hover:scale-105 text-lg sm:text-2xl scale-100">
+          <Link
+            href="/quote"
+            className="primary-button md:scale-75 lg:scale-100 hover:scale-x-105 text-center"
+          >
             GET A FREE QUOTE
-          </button>
+          </Link>
         </div>
         <div className="mt-10 flex flex-col items-center">
           <p className="red-text text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center roboto-font-nav">
