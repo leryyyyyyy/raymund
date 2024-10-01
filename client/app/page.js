@@ -298,7 +298,10 @@ const Page = () => {
             </div>
 
             <div className="mt-5 text-center lg:mb-5">
-              <a href="#" className=" text-slate-600 border-b">
+              <a
+                href="https://maps.app.goo.gl/L2GsCpHTx6BfuigUA"
+                className=" text-slate-600 border-b"
+              >
                 click here to view &nbsp;
                 <span className="text-red-600 border-b-red-600">
                   more reviews
