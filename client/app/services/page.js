@@ -21,11 +21,59 @@ function Page() {
     <div className="flex flex-col min-h-screen roboto-font-nav">
       <Navbar />
       <main className="flex-grow">
-        <section
+        <section className="relative flex flex-col lg:flex-row lg:h-screen sm:h-[50vh] md:h-[60vh] max-w-7xl mx-auto lg:max-w-none xl:pt-10">
+          <div
+            className="absolute inset-0 bg-cover bg-right bg-no-repeat sm:blur-none blur-sm hero-image-default"
+            style={{
+              zIndex: -1,
+            }}
+          ></div>
+          <div className="relative lg:top-12 text-center lg:left-14 sm:text-left lg:text-left p-6 lg:p-0">
+            <div className="md:space-y-2">
+              <h1 className="max-w-2xl mb-4 sm:mb-6 md:mb-8 lg:font-extrabold tracking-tight text-3xl sm:text-3xl md:text-6xl xl:text-8xl dark:text-white whitespace-nowrap">
+                <span className="inline-block text-black px-4 py-3">
+                  <span className="block">TOP TIER</span>
+                  <span className="block blue-text">QUALITY</span>
+                  <span className="block red-text">REPAIR</span>
+                  <span className="block">APPLIANCES</span>
+                </span>
+              </h1>
+            </div>
+            {/* <div className="flex flex-wrap gap-4 mt-4">
+              <a
+                href="/quote"
+                className="inline-flex items-center justify-center px-4 py-2 text-sm sm:text-base md:text-lg font-semibold primary-button"
+              >
+                GET A FREE QUOTE
+              </a>
+              <a
+                href="/about-us"
+                className=" secondary-button inline-flex [#FF3131] items-center justify-center px-4 py-2 text-sm sm:text-base md:text-lg font-semibold "
+              >
+                GET TO KNOW US
+              </a>
+            </div> */}
+            <div className="mt-10 ">
+              <Link
+                href="/quote"
+                className="md:mr-5 inline-flex mb-5 mr-2  md:mb-0  items-center justify-center px-4 py-2 text-sm sm:text-base md:text-lg font-semibold primary-button hover:bg-yellow-100 hover:scale-x-105"
+              >
+                GET A FREE QUOTE
+              </Link>
+              <Link
+                href="/about-us"
+                className="inline-flex items-center  justify-center px-4 py-2 text-sm sm:text-base md:text-lg font-semibold primary-button hover:bg-yellow-100 hover:scale-x-105"
+              >
+                GET TO KNOW US
+              </Link>
+            </div>
+          </div>
+        </section>
+        {/* <section
           className="relative bg-cover bg-no-repeat h-[70vh] lg:h-[80vh] bg-center hero-image-default"
           aria-label="Background image showing appliance repair services"
         >
-          {/* Optional: Add overlay text or content */}
+      
           <div>
             <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
               <div className="mr-auto place-self-center lg:col-span-7 pt-10 sm:pt-16 md:pt-20">
@@ -55,7 +103,7 @@ function Page() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <div className="h-auto py-8 secondary-color text-white">
           <div className="container mx-auto px-4">

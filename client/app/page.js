@@ -8,16 +8,17 @@ import Link from "next/link";
 
 const Page = () => {
   return (
-    <div className="flex flex-col min-h-screen roboto-font-nav">
+    <>
       <Navbar />
-      <main className="flex-grow">
-        <section
-          className="bg-cover  bg-no-repeat h-[75vh] sm:h-[50vh] md:h-[60vh] lg:h-[85vh]"
-          style={{
-            backgroundImage: "url('/image 5.png')",
-          }}
-          aria-label="Background image showing appliance repair services"
-        >
+      <main className="flex-grow roboto-font-nav">
+        {/* <section className="relative flex flex-col lg:flex-row lg:h-[75vh] sm:h-[50vh] md:h-[60vh] max-w-7xl mx-auto">
+          <div
+            className="absolute inset-0 bg-contain bg-right bg-no-repeat sm:blur-none blur-sm"
+            style={{
+              backgroundImage: "url('/image 5.png')",
+              zIndex: -1,
+            }}
+          ></div>
           <div>
             <div className="grid max-w-screen-xl px-2 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-44 lg:grid-cols-12">
               <div className="mr-auto place-self-center lg:col-span-7 pt-10 sm:pt-16 md:pt-20">
@@ -48,6 +49,44 @@ const Page = () => {
                   </a>
                 </div>
               </div>
+            </div>
+          </div>
+        </section> */}
+        <section className="relative flex flex-col lg:flex-row lg:h-screen sm:h-[50vh] md:h-[60vh] max-w-7xl mx-auto lg:max-w-none xl:pt-10">
+          <div
+            className="absolute inset-0 bg-cover bg-center sm:blur-none blur-sm"
+            style={{
+              backgroundImage: "url('/image 5.png')",
+              zIndex: -1,
+            }}
+          ></div>
+
+          <div className="relative lg:top-36 text-center lg:left-14 sm:text-left lg:text-left p-6 lg:p-0">
+            <div className="md:space-y-2">
+              <h1 className="max-w-2xl mb-4 sm:mb-6 md:mb-8 font-extrabold tracking-tight text-2xl sm:text-3xl md:text-5xl xl:text-[75px] dark:text-white whitespace-nowrap">
+                <span className="inline-block secondary-color text-white px-4 py-3">
+                  WE REPAIR APPLIANCES
+                </span>
+              </h1>
+              <h2 className="max-w-2xl mb-4 sm:mb-6 md:mb-8 font-extrabold tracking-tight text-lg sm:text-2xl md:text-3xl xl:text-4xl dark:text-white whitespace-nowrap">
+                <span className="inline-block tertiary-color text-white px-4 py-3">
+                  STOVES, DRYERS AND MORE!
+                </span>
+              </h2>
+            </div>
+            <div className="mt-10 ">
+              <Link
+                href="/faq"
+                className="md:mr-5  inline-flex mb-5 mr-2  md:mb-0inline-flex items-center justify-center px-4 py-2 text-sm sm:text-base md:text-lg font-semibold primary-button hover:bg-yellow-100 hover:scale-x-105"
+              >
+                LEARN MORE
+              </Link>
+              <Link
+                href="/services"
+                className="inline-flex items-center justify-center px-4 py-2 text-sm sm:text-base md:text-lg font-semibold primary-button hover:bg-yellow-100 hover:scale-x-105"
+              >
+                OUR SERVICE
+              </Link>
             </div>
           </div>
         </section>
@@ -314,7 +353,7 @@ const Page = () => {
         </div>
       </main>
       <Footer />
-    </div>
+    </>
   );
 };
 
