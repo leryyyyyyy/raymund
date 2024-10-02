@@ -7,16 +7,19 @@ function Page() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [userEmail, setUserEmail] = useState("");
   const [selectedPlan, setSelectedPlan] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [showPopup, setShowPopup] = useState(false); // State for pop-up message
+  const [popupMessage, setPopupMessage] = useState(""); // State for the pop-up message
 
   const handleButtonClick = (plan) => {
-    setSelectedPlan(plan); // Set the selected plan
-    setIsFormOpen(true); // Open the form
+    setSelectedPlan(plan);
+    setIsFormOpen(true);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
-    // Define a message based on the selected plan
     const planMessages = {
       "Basic Repair":
         "Thank you for choosing our Basic Repair plan. We will provide a clear estimate before any work begins, ensuring transparency and trust.",
@@ -26,45 +29,60 @@ function Page() {
         "Thank you for your interest in our Preventive Maintenance package. This plan is designed to help prevent unexpected breakdowns and extend the life of your appliance.",
     };
 
-    // Prepare the message for the user
     const userMessage =
       planMessages[selectedPlan] ||
       "Thank you for your interest! We appreciate your inquiry and will respond shortly.";
 
-    // Send email logic here
     const emailData = {
       to: userEmail,
       subject: `Your Plan Request: ${selectedPlan}`,
       text: userMessage,
     };
 
-    // Send email to the user
-    await fetch("/api/selectedPlan", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(emailData),
-    });
+    try {
+      await fetch("/api/selectedPlan", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(emailData),
+      });
 
-    // Optionally send a notification to the company
-    const companyEmailData = {
-      to: userEmail,
-      subject: "New Plan Request",
-      text: `A new user has requested the ${selectedPlan} plan.\n\nPlease follow up with them at your earliest convenience.`,
-    };
+      const companyEmailData = {
+        to: userEmail,
+        subject: "New Plan Request",
+        text: `A new user has requested the ${selectedPlan} plan.\n\nPlease follow up with them at your earliest convenience.`,
+      };
 
-    await fetch("/api/planReceived", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(companyEmailData),
-    });
+      await fetch("/api/planReceived", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(companyEmailData),
+      });
 
-    // Close the form and reset the email input
-    setIsFormOpen(false);
-    setUserEmail("");
+      // Show the pop-up message
+      setPopupMessage(
+        "Your request has been submitted successfully! We will be in touch soon."
+      );
+      setShowPopup(true); // Show the pop-up
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setPopupMessage(
+        "There was an error sending your request. Please try again."
+      );
+      setShowPopup(true); // Show the pop-up even on error
+    } finally {
+      setIsLoading(false);
+      setIsFormOpen(false);
+      setUserEmail("");
+
+      // Hide the pop-up after 3 seconds
+      setTimeout(() => {
+        setShowPopup(false);
+      }, 3000);
+    }
   };
 
   return (
@@ -375,34 +393,60 @@ function Page() {
             </div>
           </div>
           {isFormOpen && (
-            <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-              <div className="bg-white p-6 rounded shadow-md w-96">
-                <h2 className="text-xl font-bold mb-4">Enter Your Email</h2>
+            <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
+              <div className="bg-white p-5 rounded-lg shadow-lg">
+                <h3 className="text-lg font-bold">Submit Your Email</h3>
                 <form onSubmit={handleSubmit}>
                   <input
                     type="email"
                     value={userEmail}
                     onChange={(e) => setUserEmail(e.target.value)}
                     placeholder="Your Email"
+                    className="border border-gray-300 p-2 w-full mt-2 mb-4"
                     required
-                    className="border rounded p-2 w-full mb-4"
                   />
-                  <div className="flex justify-between">
-                    <button
-                      type="button"
-                      onClick={() => setIsFormOpen(false)}
-                      className="border rounded p-2 bg-gray-300 hover:bg-gray-400"
-                    >
-                      Cancel
-                    </button>
-                    <button
-                      type="submit"
-                      className="bg-blue-500 text-white rounded p-2 hover:bg-blue-600"
-                    >
-                      Submit
-                    </button>
-                  </div>
+                  <button
+                    type="submit"
+                    className="submit-button font-bold my-5 p-2 w-full"
+                    disabled={isLoading}
+                  >
+                    {isLoading ? (
+                      <span className="flex items-center justify-center">
+                        <svg
+                          className="animate-spin h-5 w-5 mr-3"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <circle
+                            className="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                          ></circle>
+                          <path
+                            className="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8v8H4z"
+                          ></path>
+                        </svg>
+                        Sending...
+                      </span>
+                    ) : (
+                      "Submit"
+                    )}
+                  </button>
                 </form>
+              </div>
+            </div>
+          )}
+          {/* Pop-Up Message */}
+          {showPopup && (
+            <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
+              <div className="bg-green-500 text-white py-4 px-6 rounded shadow-lg transition-transform transform scale-100">
+                {popupMessage}
               </div>
             </div>
           )}
