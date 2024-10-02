@@ -43,9 +43,8 @@ export async function POST(req) {
     `;
 
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      replyTo: email,
-      to: process.env.EMAIL_USER,
+      from: process.env.EMAIL_USER, // sender address
+      to: to, // list of receivers
       subject: "New Plan Request",
       html: providerHtmlContent,
       attachments: [

@@ -25,8 +25,8 @@ export async function POST(req) {
 
     // Email options
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      replyTo: email,
+      from: `${fullName} <${process.env.EMAIL_USER}>`,
+
       to: process.env.EMAIL_USER,
       subject: "Service Appointment",
       html: `

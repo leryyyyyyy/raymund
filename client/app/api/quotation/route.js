@@ -34,8 +34,7 @@ export async function POST(req) {
 
     // Email to service provider
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      replyTo: email,
+      from: `${fullName} <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
       subject: "Free Quotation Request",
       html: `
