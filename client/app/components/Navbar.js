@@ -46,7 +46,9 @@ const Navbar = () => {
               {/* <a href="#" className="text-2xl font-bold text-blue-500">
                 LOGO
               </a> */}
-              <img src="/Raymond 1.png" className="pb-2" alt="Logo"></img>
+              <a href="/#">
+                <img src="/Raymond 1.png" className="pb-2" alt="Logo"></img>
+              </a>
             </div>
             <div className="hidden md:flex lg:space-x-4">
               <Link

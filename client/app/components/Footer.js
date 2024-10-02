@@ -70,8 +70,11 @@ const Footer = () => {
             {" "}
             {/* Added padding */}
             <div className="text-xl font-semibold">Contacts</div>
-            <a href="mailto:blonesraymund@gmail.com" className="m-1 underline">
-              blonesraymund@gmail.com
+            <a
+              href="mailto:info@rbappliancerepair.com"
+              className="m-1 underline"
+            >
+              info@rbappliancerepair.com
             </a>
             <p className="m-1">778-922-8628</p>
             <div className="mt-10 text-xl font-semibold">Follow Us</div>

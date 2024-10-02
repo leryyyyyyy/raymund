@@ -173,7 +173,7 @@ const FrequentlyAsked = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-7">
           <Link
             href="/quote"
             className="primary-button md:scale-75 lg:scale-100 hover:scale-x-105 text-center"

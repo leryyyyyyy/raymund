@@ -335,7 +335,10 @@ const Page = () => {
           </div>
         </div> */}
 
-        <div className=" p-5 lg:py-10 lg:px-14  sm:mx-10 md:mx-5 lg:mx-16 my-8 md:mb-24 ">
+        <div
+          className=" p-5 lg:py-10 lg:px-14  sm:mx-10 md:mx-5 lg:mx-16 my-8 md:mb-24  "
+          id="ourReviews"
+        >
           <div className="text-center mb-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-black">
               OUR REVIEWS

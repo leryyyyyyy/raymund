@@ -106,7 +106,7 @@ const Page = () => {
                 </div>
                 <div className="flex items-center mb-4">
                   <FaEnvelope className="mr-2" />
-                  <span>Email: blonesraymund@gmail.com</span>
+                  <span>Email: info@rbappliancerepair.com</span>
                 </div>
                 <div className="flex items-center mb-4">
                   <FaMapMarkerAlt className="mr-2" />

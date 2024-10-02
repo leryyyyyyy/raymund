@@ -77,6 +77,16 @@ module.exports = {
           padding: "6px 18px",
           transition: "all 0.3s ease-in-out",
         },
+        ".cancel-button": {
+          fontFamily: "Roboto",
+          fontWeight: "600",
+          fontSize: "25px",
+          backgroundColor: "#F81818", //! changed color
+          color: "#fff", //! changed color
+          borderRadius: "8px",
+          padding: "6px 18px",
+          transition: "all 0.3s ease-in-out",
+        },
         ".footer-button": {
           fontFamily: "Roboto",
           fontWeight: "600",
