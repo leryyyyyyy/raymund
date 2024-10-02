@@ -29,9 +29,9 @@ const FrequentlyAsked = () => {
       <div className="mt-10 px-5 sm:p-6 lg:p-0 ">
         <div className="w-full max-w-7xl mx-auto space-y-4 ">
           {/* Accordion Item 1 */}
-          <div className="secondary-color rounded-3xl mx-0 md:mx-10">
+          <div className="secondary-color rounded-3xl mx-0 md:mx-10 hover:scale-105 transform transition-transform">
             <button
-              className="flex items-center w-full  text-left px-4 py-3 md:pl-16 text-md lg:text-2xl roboto-font-nav text-slate-50 secondary-color focus:outline-none rounded-3xl"
+              className="flex items-center w-full  text-left px-4 py-3 md:pl-16 text-md lg:text-2xl roboto-font-nav text-slate-50 secondary-color focus:outline-none rounded-3xl "
               onClick={() => toggleAccordion(1)}
             >
               <img src="/Check Mark.svg" className="w-9 me-10"></img>
@@ -49,7 +49,7 @@ const FrequentlyAsked = () => {
           </div>
 
           {/* Accordion Item 2 */}
-          <div className="secondary-color rounded-3xl mx-0 md:mx-10">
+          <div className="secondary-color rounded-3xl mx-0 md:mx-10 hover:scale-105 transform transition-transform">
             <button
               className="flex items-center w-full text-left px-4 py-3 md:pl-16 text-md lg:text-2xl roboto-font-nav text-slate-50 secondary-color focus:outline-none rounded-3xl"
               onClick={() => toggleAccordion(2)}
@@ -72,7 +72,7 @@ const FrequentlyAsked = () => {
           </div>
 
           {/* Accordion Item 3 */}
-          <div className="secondary-color rounded-3xl mx-0 md:mx-10">
+          <div className="secondary-color rounded-3xl mx-0 md:mx-10 hover:scale-105 transform transition-transform">
             <button
               className="flex items-center w-full text-left px-4 py-3 md:pl-16 text-md lg:text-2xl roboto-font-nav text-slate-50 secondary-color focus:outline-none rounded-3xl"
               onClick={() => toggleAccordion(3)}
@@ -93,7 +93,7 @@ const FrequentlyAsked = () => {
           </div>
 
           {/* Accordion Item 4 */}
-          <div className="secondary-color rounded-3xl mx-0 md:mx-10">
+          <div className="secondary-color rounded-3xl mx-0 md:mx-10 hover:scale-105 transform transition-transform">
             <button
               className="flex items-center w-full text-left px-4 py-3 md:pl-16 text-md lg:text-2xl roboto-font-nav text-slate-50 secondary-color focus:outline-none rounded-3xl"
               onClick={() => toggleAccordion(4)}
@@ -114,7 +114,7 @@ const FrequentlyAsked = () => {
           </div>
 
           {/* Accordion Item 5 */}
-          <div className="secondary-color rounded-3xl mx-0 md:mx-10">
+          <div className="secondary-color rounded-3xl mx-0 md:mx-10 hover:scale-105 transform transition-transform">
             <button
               className="flex items-center w-full text-left px-4 py-3 md:pl-16 text-md lg:text-2xl roboto-font-nav text-slate-50 secondary-color focus:outline-none rounded-3xl"
               onClick={() => toggleAccordion(5)}
@@ -135,7 +135,7 @@ const FrequentlyAsked = () => {
           </div>
 
           {/* Accordion Item 6 */}
-          <div className="secondary-color rounded-3xl mx-0 md:mx-10">
+          <div className="secondary-color rounded-3xl mx-0 md:mx-10 hover:scale-105 transform transition-transform">
             <button
               className="flex items-center w-full text-left px-4 py-3 md:pl-16 text-md lg:text-2xl roboto-font-nav text-slate-50 secondary-color focus:outline-none rounded-3xl"
               onClick={() => toggleAccordion(6)}
