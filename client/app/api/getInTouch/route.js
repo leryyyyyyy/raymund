@@ -14,10 +14,12 @@ export async function POST(req) {
 
     // Setup Nodemailer transporter
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.hostinger.com", // Hostinger's SMTP server
+      port: 587, // Secure port (use 587 for STARTTLS)
+      secure: true, // True for SSL/TLS, false for STARTTLS
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        user: process.env.EMAIL_USER, // Your Hostinger email address (e.g., user@yourdomain.com)
+        pass: process.env.EMAIL_PASS, // Your Hostinger email password
       },
     });
 
