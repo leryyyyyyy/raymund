@@ -22,7 +22,7 @@ export async function POST(req) {
     const transporter = nodemailer.createTransport({
       host: "smtp.hostinger.com", // Hostinger's SMTP server
       port: 587, // Secure port (use 587 for STARTTLS)
-      secure: true, // True for SSL/TLS, false for STARTTLS
+      secure: false, // True for SSL/TLS, false for STARTTLS
       auth: {
         user: process.env.EMAIL_USER, // Your Hostinger email address (e.g., user@yourdomain.com)
         pass: process.env.EMAIL_PASS, // Your Hostinger email password
@@ -43,8 +43,9 @@ export async function POST(req) {
     `;
 
     const mailOptions = {
-      from: to, // sender address
-      to: process.env.EMAIL_USER, // list of receivers
+      from: process.env.EMAIL_USER,
+      replyTo: email,
+      to: process.env.EMAIL_USER,
       subject: "New Plan Request",
       html: providerHtmlContent,
       attachments: [
