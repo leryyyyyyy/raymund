@@ -78,7 +78,7 @@ export async function POST(req) {
           <p><strong>Summary of your request:</strong></p>
           <p>Service: ${services} <br/>Message: <br/> ${details}</p>
           <br/>
-          <p>Best regards,<br/>Raymund Blone Appliances Repair</p>
+          <p>Best regards,<br/>Raymund Blones Appliances Repair</p>
         </div>
       `,
       attachments: [
